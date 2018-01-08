@@ -14,7 +14,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="TFK-5H-09P"/>
+                    <connections>
+                        <outlet property="email" destination="Jg3-z9-ffa" id="jMx-eM-cxN"/>
+                        <outlet property="icon" destination="LUc-Da-Vfa" id="ZM8-oB-p6y"/>
+                        <outlet property="login" destination="29b-JX-1TO" id="zhg-BR-p1f"/>
+                        <outlet property="loginWithFacebook" destination="kIf-7o-7hG" id="n1B-Hk-tIM"/>
+                        <outlet property="password" destination="g2w-GC-ZYS" id="CmD-kd-mne"/>
+                        <outlet property="register" destination="rgY-QI-jXr" id="lH2-G1-IAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +106,7 @@
         <!--Registrar-se-->
         <scene sceneID="btV-hx-KJR">
             <objects>
-                <viewController id="ftz-W7-sOf" sceneMemberID="viewController">
+                <viewController id="ftz-W7-sOf" customClass="RegisterViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kLc-bO-o1a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +191,15 @@
                         <viewLayoutGuide key="safeArea" id="tCp-NK-Tfr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registrar-se" id="aZe-9b-avN"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="xkY-KP-A5N" id="U4c-rh-4GC"/>
+                        <outlet property="done" destination="Jfa-I0-Sm6" id="QfW-a6-zoo"/>
+                        <outlet property="email" destination="qhN-5h-cki" id="8wR-gW-Yrc"/>
+                        <outlet property="icon" destination="VJG-fD-U4i" id="8IW-5w-mfP"/>
+                        <outlet property="name" destination="UXD-jn-cMo" id="V0v-ox-twM"/>
+                        <outlet property="password" destination="pTY-iB-yv6" id="UUK-6G-P14"/>
+                        <outlet property="registerWithFacebook" destination="kAD-Lt-nWw" id="9Qm-G7-bJy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FW-Pb-fhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +208,7 @@
         <!--Sobre-->
         <scene sceneID="tKv-eA-QoP">
             <objects>
-                <viewController id="fw5-2p-lSV" sceneMemberID="viewController">
+                <viewController id="fw5-2p-lSV" customClass="AboutViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pv8-JT-Sgw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,6 +279,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="about" destination="R0S-fk-FAc" id="5qS-rC-TUE"/>
+                        <outlet property="contact" destination="vPb-ug-zD3" id="sMY-vX-hWd"/>
+                        <outlet property="done" destination="exs-Q9-00M" id="K8U-Zj-rMX"/>
+                        <outlet property="profile" destination="hGF-mb-Zfr" id="6YK-Hs-Sjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0C-Gg-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +293,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bTS-x0-TlP">
             <objects>
-                <tabBarController id="Lqz-eY-PFB" sceneMemberID="viewController">
+                <tabBarController id="Lqz-eY-PFB" customClass="TabBarController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ISs-zF-eP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

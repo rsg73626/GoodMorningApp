@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed-->
+        <scene sceneID="CGH-Th-38l">
+            <objects>
+                <tableViewController id="tXt-iP-4A8" customClass="FeedTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gre-sl-p86">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="J20-Ik-my8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="greeting" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="greeting" rowHeight="200" id="wrJ-Zo-1nV" customClass="GreetingTableViewCell" customModule="GoodMorningApp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wrJ-Zo-1nV" id="xsL-Tu-00a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bom dia!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-Lu-d9X">
+                                                    <rect key="frame" x="16" y="26" width="67" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="Ntb-cA-ND1">
+                                                    <rect key="frame" x="162" y="11" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH7-Om-i0Q">
+                                                    <rect key="frame" x="220" y="25" width="131" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" editable="NO" text="Essa vai ser a mensagem de bom dia, boa tarde, boa noite ou boa madrugada do usuário. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-PO-9KP">
+                                                    <rect key="frame" x="16" y="69" width="343" height="82"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSy-2Z-f4k">
+                                                    <rect key="frame" x="16" y="159" width="35" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Ação"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tXt-iP-4A8" id="Nt6-Xi-uZG"/>
+                            <outlet property="delegate" destination="tXt-iP-4A8" id="eNo-js-0Iw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feed" id="NaG-Pc-lJ0">
+                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="uKe-WR-eh7"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90q-9C-D2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4264.8000000000002" y="119.1904047976012"/>
+        </scene>
+        <!--Filtro-->
+        <scene sceneID="TRd-Tt-e5L">
+            <objects>
+                <viewController id="rFn-O2-oLj" customClass="FilterViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6mS-Cx-IcL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fmu-iZ-Xg6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filtro" id="hgP-xf-WdQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9XA-i9-rGX"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BiJ-oP-sK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="-38.23088455772114"/>
+        </scene>
+        <!--Cumprimento-->
+        <scene sceneID="zpg-a1-E71">
+            <objects>
+                <viewController id="sOc-k0-uHh" customClass="GreetingViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7DS-6u-ZRi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yqx-ta-SHo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cumprimento" id="Sfd-dP-Xvl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lE9-FY-zkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="692.20389805097454"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="0M6-mI-tsV">
+            <objects>
+                <tableViewController id="quw-cl-Msi" customClass="FeedTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZAT-b2-kwy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="greeting" rowHeight="200" id="u8D-qV-BKc" customClass="GreetingTableViewCell" customModule="GoodMorningApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u8D-qV-BKc" id="jZ4-xy-TSm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bom dia!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNL-LX-J3Z">
+                                            <rect key="frame" x="20" y="26" width="67" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-jV-Kbp">
+                                            <rect key="frame" x="220" y="26" width="131" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Essa será a mensagem de bom dia, boa tarde, boa noite ou boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-K6-Sn1">
+                                            <rect key="frame" x="16" y="69" width="343" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="KHc-2P-VsP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="KCG-Ls-VvO">
+                                            <rect key="frame" x="162" y="11" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="QOk-qh-W98"/>
+                                                <constraint firstAttribute="width" constant="50" id="ijF-E2-Jbh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpA-cs-4ol">
+                                            <rect key="frame" x="16" y="157" width="35" height="30"/>
+                                            <state key="normal" title="Ação"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KCG-Ls-VvO" firstAttribute="leading" secondItem="YNL-LX-J3Z" secondAttribute="trailing" constant="75" id="7D6-Yz-fe3"/>
+                                        <constraint firstItem="vpA-cs-4ol" firstAttribute="top" secondItem="Biz-K6-Sn1" secondAttribute="bottom" constant="8" id="A2M-u3-bA3"/>
+                                        <constraint firstItem="Biz-K6-Sn1" firstAttribute="top" secondItem="KCG-Ls-VvO" secondAttribute="bottom" constant="8" id="Bib-lV-jj3"/>
+                                        <constraint firstItem="Rbt-jV-Kbp" firstAttribute="leading" secondItem="KCG-Ls-VvO" secondAttribute="trailing" constant="8" symbolic="YES" id="IIa-jJ-kew"/>
+                                        <constraint firstItem="KCG-Ls-VvO" firstAttribute="centerY" secondItem="YNL-LX-J3Z" secondAttribute="centerY" id="LWM-RE-f04"/>
+                                        <constraint firstItem="KCG-Ls-VvO" firstAttribute="centerY" secondItem="Rbt-jV-Kbp" secondAttribute="centerY" id="VP6-ia-y12"/>
+                                        <constraint firstItem="KCG-Ls-VvO" firstAttribute="centerX" secondItem="Biz-K6-Sn1" secondAttribute="centerX" id="cFf-Yk-9wR"/>
+                                        <constraint firstItem="Biz-K6-Sn1" firstAttribute="leading" secondItem="jZ4-xy-TSm" secondAttribute="leadingMargin" id="ezy-Oh-gGJ"/>
+                                        <constraint firstItem="Biz-K6-Sn1" firstAttribute="trailing" secondItem="jZ4-xy-TSm" secondAttribute="trailingMargin" id="iFQ-qx-Jja"/>
+                                        <constraint firstItem="Biz-K6-Sn1" firstAttribute="centerX" secondItem="jZ4-xy-TSm" secondAttribute="centerX" id="j2u-aM-vkj"/>
+                                        <constraint firstItem="KCG-Ls-VvO" firstAttribute="top" secondItem="jZ4-xy-TSm" secondAttribute="topMargin" id="lq1-g3-t8Y"/>
+                                        <constraint firstItem="vpA-cs-4ol" firstAttribute="leading" secondItem="jZ4-xy-TSm" secondAttribute="leadingMargin" id="sj4-Dr-zGG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="sOc-k0-uHh" kind="show" id="mxs-qK-WxJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="quw-cl-Msi" id="M31-KP-fhe"/>
+                            <outlet property="delegate" destination="quw-cl-Msi" id="gWj-hb-9ch"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feed" id="iK5-KT-zUS">
+                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="Edc-w0-uQk">
+                            <connections>
+                                <segue destination="rFn-O2-oLj" kind="show" id="UIx-v6-yvz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7z-zP-4cm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="340.47976011994007"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="FV9-hb-bEb">
+            <objects>
+                <navigationController storyboardIdentifier="feedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="fN4-7D-107" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="vqg-AK-zid"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V96-qd-1Ph">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="quw-cl-Msi" kind="relationship" relationship="rootViewController" id="deo-Db-NBa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76B-nZ-aDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="340"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="perfil" width="500" height="500"/>
+    </resources>
+</document>
