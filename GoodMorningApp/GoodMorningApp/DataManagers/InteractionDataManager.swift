@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+class InteractionDataManager: DataManagerProtocol{
+    static func create(_: Interaction, callback: @escaping (Interaction?) -> Void) {
+        
+    }
+    
+    static func read(_: Interaction, callback: @escaping (Interaction?) -> Void) {
+        
+    }
+    
+    static func readById(_: Int, callback: @escaping ([Interaction]?) -> Void) {
+        
+    }
+    
+    static func update(_: Interaction, callback: @escaping (Interaction?) -> Void) {
+        
+    }
+    
+    static func delete(_: Interaction, callback: @escaping (Interaction?) -> Void) {
+        
+    }
+}

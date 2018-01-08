@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+class UserDataManager: DataManagerProtocol{
+    static func create(_: User, callback: @escaping (User?) -> Void) {
+        
+    }
+    
+    static func read(_: User, callback: @escaping (User?) -> Void) {
+        
+    }
+    
+    static func readById(_: Int, callback: @escaping ([User]?) -> Void) {
+        
+    }
+    
+    static func update(_: User, callback: @escaping (User?) -> Void) {
+        
+    }
+    
+    static func delete(_: User, callback: @escaping (User?) -> Void) {
+        
+    }
+}

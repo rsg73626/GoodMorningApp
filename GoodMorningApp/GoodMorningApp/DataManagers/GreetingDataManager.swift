@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+class GreetingDataManager: DataManagerProtocol{
+    static func create(_: Greeting, callback: @escaping (Greeting?) -> Void) {
+        
+    }
+    
+    static func read(_: Greeting, callback: @escaping (Greeting?) -> Void) {
+        
+    }
+    
+    static func readById(_: Int, callback: @escaping ([Greeting]?) -> Void) {
+        
+    }
+    
+    static func update(_: Greeting, callback: @escaping (Greeting?) -> Void) {
+        
+    }
+    
+    static func delete(_: Greeting, callback: @escaping (Greeting?) -> Void) {
+        
+    }
+}

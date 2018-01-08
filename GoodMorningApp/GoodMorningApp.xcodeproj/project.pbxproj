@@ -7,12 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191B2003B8F9001F252F /* LoginViewController.swift */; };
+		4540191E2003B909001F252F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191D2003B909001F252F /* RegisterViewController.swift */; };
+		454019202003B91E001F252F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191F2003B91E001F252F /* AboutViewController.swift */; };
+		454019222003B988001F252F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019212003B988001F252F /* TabBarController.swift */; };
+		454019242003BACB001F252F /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019232003BACB001F252F /* FeedTableViewController.swift */; };
+		454019262003BADD001F252F /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019252003BADD001F252F /* GreetingViewController.swift */; };
+		454019282003BAED001F252F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019272003BAED001F252F /* FilterViewController.swift */; };
+		4540192A2003BB36001F252F /* GreetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019292003BB36001F252F /* GreetingTableViewCell.swift */; };
+		4540192C2003BB5F001F252F /* TodayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540192B2003BB5F001F252F /* TodayTableViewController.swift */; };
+		4540192E2003BB7B001F252F /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540192D2003BB7B001F252F /* TodayTableViewCell.swift */; };
+		454019302003BBC2001F252F /* AdjustsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540192F2003BBC2001F252F /* AdjustsTableViewController.swift */; };
+		454019322003BBE6001F252F /* PorfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019312003BBE6001F252F /* PorfileViewController.swift */; };
+		454019372004119C001F252F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019362004119C001F252F /* User.swift */; };
+		45401939200411A5001F252F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45401938200411A5001F252F /* Contact.swift */; };
+		4540193B200411BB001F252F /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193A200411BB001F252F /* Greeting.swift */; };
+		4540193E20041882001F252F /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193D20041882001F252F /* Interaction.swift */; };
+		4540194020041A28001F252F /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193F20041A28001F252F /* DataManagerProtocol.swift */; };
+		4540194220041E8A001F252F /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540194120041E8A001F252F /* UserDataManager.swift */; };
+		45401944200425F1001F252F /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45401943200425F1001F252F /* ContactDataManager.swift */; };
+		4540194620042629001F252F /* GreetingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540194520042629001F252F /* GreetingDataManager.swift */; };
+		45401948200426AC001F252F /* InteractionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45401947200426AB001F252F /* InteractionDataManager.swift */; };
+		4540194A2004287F001F252F /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019492004287F001F252F /* PreferencesManager.swift */; };
 		456A94B71FFDE23E00B6CA39 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94B61FFDE23E00B6CA39 /* Feed.storyboard */; };
 		456A94B91FFDE4CC00B6CA39 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94B81FFDE4CC00B6CA39 /* Today.storyboard */; };
 		456A94BB1FFDE54C00B6CA39 /* Adjusts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */; };
 		456A94BD1FFDE58500B6CA39 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94BC1FFDE58500B6CA39 /* Profile.storyboard */; };
 		45AF01A01FFC65D300BFCA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */; };
-		45AF01A21FFC65D300BFCA08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01A11FFC65D300BFCA08 /* ViewController.swift */; };
 		45AF01A51FFC65D300BFCA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01A31FFC65D300BFCA08 /* Main.storyboard */; };
 		45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01A61FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld */; };
 		45AF01AA1FFC65D300BFCA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01A91FFC65D300BFCA08 /* Assets.xcassets */; };
@@ -39,13 +60,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4540191B2003B8F9001F252F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4540191D2003B909001F252F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4540191F2003B91E001F252F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		454019212003B988001F252F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		454019232003BACB001F252F /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		454019252003BADD001F252F /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		454019272003BAED001F252F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		454019292003BB36001F252F /* GreetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingTableViewCell.swift; sourceTree = "<group>"; };
+		4540192B2003BB5F001F252F /* TodayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewController.swift; sourceTree = "<group>"; };
+		4540192D2003BB7B001F252F /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		4540192F2003BBC2001F252F /* AdjustsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustsTableViewController.swift; sourceTree = "<group>"; };
+		454019312003BBE6001F252F /* PorfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorfileViewController.swift; sourceTree = "<group>"; };
+		454019362004119C001F252F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45401938200411A5001F252F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		4540193A200411BB001F252F /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeting.swift; sourceTree = "<group>"; };
+		4540193D20041882001F252F /* Interaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interaction.swift; sourceTree = "<group>"; };
+		4540193F20041A28001F252F /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		4540194120041E8A001F252F /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		45401943200425F1001F252F /* ContactDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
+		4540194520042629001F252F /* GreetingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingDataManager.swift; sourceTree = "<group>"; };
+		45401947200426AB001F252F /* InteractionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionDataManager.swift; sourceTree = "<group>"; };
+		454019492004287F001F252F /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
 		456A94B61FFDE23E00B6CA39 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		456A94B81FFDE4CC00B6CA39 /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adjusts.storyboard; sourceTree = "<group>"; };
 		456A94BC1FFDE58500B6CA39 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		45AF019C1FFC65D300BFCA08 /* GoodMorningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodMorningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45AF01A11FFC65D300BFCA08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45AF01A41FFC65D300BFCA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45AF01A71FFC65D300BFCA08 /* GoodMorningApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodMorningApp.xcdatamodel; sourceTree = "<group>"; };
 		45AF01A91FFC65D300BFCA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,44 +126,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4540191620039F33001F252F /* athentication */ = {
+		4540191620039F33001F252F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				45AF01A31FFC65D300BFCA08 /* Main.storyboard */,
+				4540191B2003B8F9001F252F /* LoginViewController.swift */,
+				4540191D2003B909001F252F /* RegisterViewController.swift */,
+				4540191F2003B91E001F252F /* AboutViewController.swift */,
+				454019212003B988001F252F /* TabBarController.swift */,
 			);
-			path = athentication;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
-		4540191720039F4A001F252F /* feed */ = {
+		4540191720039F4A001F252F /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				456A94B61FFDE23E00B6CA39 /* Feed.storyboard */,
+				454019232003BACB001F252F /* FeedTableViewController.swift */,
+				454019252003BADD001F252F /* GreetingViewController.swift */,
+				454019272003BAED001F252F /* FilterViewController.swift */,
+				454019292003BB36001F252F /* GreetingTableViewCell.swift */,
 			);
-			path = feed;
+			path = Feed;
 			sourceTree = "<group>";
 		};
-		4540191820039F55001F252F /* today */ = {
+		4540191820039F55001F252F /* Today */ = {
 			isa = PBXGroup;
 			children = (
 				456A94B81FFDE4CC00B6CA39 /* Today.storyboard */,
+				4540192B2003BB5F001F252F /* TodayTableViewController.swift */,
+				4540192D2003BB7B001F252F /* TodayTableViewCell.swift */,
 			);
-			path = today;
+			path = Today;
 			sourceTree = "<group>";
 		};
-		4540191920039F5B001F252F /* adjusts */ = {
+		4540191920039F5B001F252F /* Adjusts */ = {
 			isa = PBXGroup;
 			children = (
 				456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */,
+				4540192F2003BBC2001F252F /* AdjustsTableViewController.swift */,
 			);
-			path = adjusts;
+			path = Adjusts;
 			sourceTree = "<group>";
 		};
-		4540191A20039F64001F252F /* profile */ = {
+		4540191A20039F64001F252F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				456A94BC1FFDE58500B6CA39 /* Profile.storyboard */,
+				454019312003BBE6001F252F /* PorfileViewController.swift */,
 			);
-			path = profile;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		454019332004114E001F252F /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				4540191A20039F64001F252F /* Profile */,
+				4540191920039F5B001F252F /* Adjusts */,
+				4540191820039F55001F252F /* Today */,
+				4540191720039F4A001F252F /* Feed */,
+				4540191620039F33001F252F /* Authentication */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		454019342004117E001F252F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				454019362004119C001F252F /* User.swift */,
+				45401938200411A5001F252F /* Contact.swift */,
+				4540193A200411BB001F252F /* Greeting.swift */,
+				4540193D20041882001F252F /* Interaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4540193520041185001F252F /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				4540193F20041A28001F252F /* DataManagerProtocol.swift */,
+				4540194120041E8A001F252F /* UserDataManager.swift */,
+				45401943200425F1001F252F /* ContactDataManager.swift */,
+				4540194520042629001F252F /* GreetingDataManager.swift */,
+				45401947200426AB001F252F /* InteractionDataManager.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		4540193C200411D0001F252F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				454019492004287F001F252F /* PreferencesManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		45AF01931FFC65D300BFCA08 = {
@@ -147,13 +244,11 @@
 		45AF019E1FFC65D300BFCA08 /* GoodMorningApp */ = {
 			isa = PBXGroup;
 			children = (
-				4540191A20039F64001F252F /* profile */,
-				4540191920039F5B001F252F /* adjusts */,
-				4540191820039F55001F252F /* today */,
-				4540191720039F4A001F252F /* feed */,
-				4540191620039F33001F252F /* athentication */,
+				4540193C200411D0001F252F /* Utils */,
+				4540193520041185001F252F /* DataManagers */,
+				454019342004117E001F252F /* Models */,
+				454019332004114E001F252F /* Sections */,
 				45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */,
-				45AF01A11FFC65D300BFCA08 /* ViewController.swift */,
 				45AF01A91FFC65D300BFCA08 /* Assets.xcassets */,
 				45AF01AB1FFC65D300BFCA08 /* LaunchScreen.storyboard */,
 				45AF01AE1FFC65D300BFCA08 /* Info.plist */,
@@ -318,9 +413,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4540194A2004287F001F252F /* PreferencesManager.swift in Sources */,
+				4540194620042629001F252F /* GreetingDataManager.swift in Sources */,
+				4540194020041A28001F252F /* DataManagerProtocol.swift in Sources */,
+				454019202003B91E001F252F /* AboutViewController.swift in Sources */,
+				4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */,
+				4540191E2003B909001F252F /* RegisterViewController.swift in Sources */,
+				454019242003BACB001F252F /* FeedTableViewController.swift in Sources */,
+				45401939200411A5001F252F /* Contact.swift in Sources */,
+				45401944200425F1001F252F /* ContactDataManager.swift in Sources */,
+				454019282003BAED001F252F /* FilterViewController.swift in Sources */,
+				4540193E20041882001F252F /* Interaction.swift in Sources */,
+				4540192C2003BB5F001F252F /* TodayTableViewController.swift in Sources */,
+				4540193B200411BB001F252F /* Greeting.swift in Sources */,
 				45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */,
-				45AF01A21FFC65D300BFCA08 /* ViewController.swift in Sources */,
+				45401948200426AC001F252F /* InteractionDataManager.swift in Sources */,
+				454019222003B988001F252F /* TabBarController.swift in Sources */,
+				4540194220041E8A001F252F /* UserDataManager.swift in Sources */,
+				454019372004119C001F252F /* User.swift in Sources */,
+				4540192A2003BB36001F252F /* GreetingTableViewCell.swift in Sources */,
+				454019302003BBC2001F252F /* AdjustsTableViewController.swift in Sources */,
+				454019262003BADD001F252F /* GreetingViewController.swift in Sources */,
+				454019322003BBE6001F252F /* PorfileViewController.swift in Sources */,
 				45AF01A01FFC65D300BFCA08 /* AppDelegate.swift in Sources */,
+				4540192E2003BB7B001F252F /* TodayTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
