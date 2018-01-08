@@ -44,7 +44,7 @@
                                         <rect key="frame" x="141" y="242" width="39" height="30"/>
                                         <state key="normal" title="Logar"/>
                                         <connections>
-                                            <segue destination="IvW-SR-aSg" kind="presentation" id="4xp-VD-Ijj"/>
+                                            <segue destination="Lqz-eY-PFB" kind="presentation" id="SXW-Dm-m6k"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIf-7o-7hG">
@@ -224,7 +224,7 @@
                                         <rect key="frame" x="137" y="340" width="46" height="30"/>
                                         <state key="normal" title="Pronto"/>
                                         <connections>
-                                            <segue destination="IvW-SR-aSg" kind="show" id="aqi-dn-KWM"/>
+                                            <segue destination="Lqz-eY-PFB" kind="presentation" id="XDq-vO-Znf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -258,7 +258,7 @@
                     <navigationItem key="navigationItem" title="Sobre" id="brS-Iq-WT1">
                         <barButtonItem key="rightBarButtonItem" title="Pular" id="Qgf-h7-DnN">
                             <connections>
-                                <segue destination="IvW-SR-aSg" kind="show" id="8A5-rY-hXp"/>
+                                <segue destination="Lqz-eY-PFB" kind="presentation" id="xmS-VA-sgm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -267,13 +267,65 @@
             </objects>
             <point key="canvasLocation" x="2883.75" y="132.04225352112675"/>
         </scene>
-        <!--tabBarController-->
-        <scene sceneID="9dh-Ms-KxU">
+        <!--Tab Bar Controller-->
+        <scene sceneID="bTS-x0-TlP">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" referencedIdentifier="tabBarController" id="IvW-SR-aSg" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RKj-Am-A6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="Lqz-eY-PFB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ISs-zF-eP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1u1-Fv-FmR" kind="relationship" relationship="viewControllers" id="axw-FA-TDJ"/>
+                        <segue destination="GlP-tT-G70" kind="relationship" relationship="viewControllers" id="XJC-iO-0Mm"/>
+                        <segue destination="6BU-uY-dun" kind="relationship" relationship="viewControllers" id="wGv-zu-WOt"/>
+                        <segue destination="pMx-iU-UEy" kind="relationship" relationship="viewControllers" id="8HG-OK-hx8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNf-zV-wEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="946"/>
+            <point key="canvasLocation" x="1849" y="1127"/>
+        </scene>
+        <!--feedNavigationController-->
+        <scene sceneID="Frd-6y-jc7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feed" referencedIdentifier="feedNavigationController" id="1u1-Fv-FmR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="k3j-nr-QkX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pW9-E2-yro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="842"/>
+        </scene>
+        <!--todayNavigationController-->
+        <scene sceneID="boO-YH-5Vr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Today" referencedIdentifier="todayNavigationController" id="GlP-tT-G70" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hoje" id="0ih-eI-ZRu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mut-sY-6mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="1035"/>
+        </scene>
+        <!--adjustsNavigationController-->
+        <scene sceneID="2M8-P6-4EU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Adjusts" referencedIdentifier="adjustsNavigationController" id="6BU-uY-dun" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ajustes" id="odw-PI-jLe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okg-fY-uvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="1227"/>
+        </scene>
+        <!--profileNavigationController-->
+        <scene sceneID="KsV-bL-yEV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="profileNavigationController" id="pMx-iU-UEy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" id="Ssn-xN-DpT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzf-cX-EJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="1411"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OD7-3Q-hoK">
@@ -299,6 +351,6 @@
         <image name="smile" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4xp-VD-Ijj"/>
+        <segue reference="SXW-Dm-m6k"/>
     </inferredMetricsTieBreakers>
 </document>
