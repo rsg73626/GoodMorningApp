@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+class Contact{
+    
+    //MARK: Types
+    enum ContactType{
+        case Cellphone
+        case SocialNetwork
+        case Other
+    }
+    
+    //MARK: Properties
+    var id: Int?
+    var content: String?
+    var type: ContactType
+    
+    //MARK: Initializers
+    init(content: String, type: ContactType) {
+        self.content = content
+        self.type = type
+    }
+    
+    
+}

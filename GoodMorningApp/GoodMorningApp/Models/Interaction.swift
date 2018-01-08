@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Interaction{
+    
+    //MARK: Properties
+    var greeting: Greeting
+    var isRetributed: Bool = false
+    var isLiked: Bool = false
+    
+    //MARK: Initializers
+    init(greeting: Greeting, isRetributed: Bool, isLiked: Bool) {
+        self.greeting = greeting
+        self.isRetributed = isRetributed
+        self.isLiked = isLiked
+    }
+    
+}
