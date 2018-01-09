@@ -1,5 +1,5 @@
 //
-//  PreferencesManager.swift
+//  PreferenceManager.swift
 //  GoodMorningApp
 //
 //  Created by Renan Soares Germano on 08/01/2018.
@@ -8,16 +8,15 @@
 
 import Foundation
 
-class PreferencesManager{
+class PreferenceManager{
     
     //MARK: Singleton reference
-    private static let _shared: PreferencesManager = PreferencesManager()
-    static var shared: PreferencesManager {get {return _shared}}
+    private static let _shared: PreferenceManager = PreferenceManager()
+    static var shared: PreferenceManager {get {return _shared}}
     
     //MARK: Types
-    private struct PreferencesKeys{
-        static let preferences = "preferences
-        "
+    private struct PreferenceKeys{
+        static let preferences = "preferences"
         static let keepConnected = "keepConnected"
         static let goodMorning = "goodMorning"
         static let goodAfternoon = "goodAfternoon"
@@ -30,26 +29,13 @@ class PreferencesManager{
         static let radius = "radius"
     }
     
-    struct Time{
-        var hours: Int
-        var minutes: Int
-        
-        init(hours: Int, minutes: Int) {
-            self.hours = hours
-            self.minutes = minutes
-        }
-        
-        func asString() -> String{
-            return "\(hours):\(minutes)"
-        }
-    }
-    
     enum IntervalKeys{
         case From
         case To
     }
     
     //MARK: Properties
+    private var preferences: [String:Any]!
     
     // On - Off Properties
     private var _keepConected: Bool = false
@@ -94,63 +80,92 @@ class PreferencesManager{
     // MARK: Setters
     
     func changeKeepConnected(){
-        
+        self._keepConected = !self._keepConected
+        self.preferences[PreferenceKeys.keepConnected] = self._keepConected
+        self.saveData()
     }
     
     func changeIsGoodMorningActive(){
-        
+        self._isGoodMorningActive = !self._isGoodMorningActive
+        self.preferences[PreferenceKeys.goodMorning] = self._isGoodMorningActive
+        self.saveData()
     }
     
     func changeIsGoodAfternoonActive(){
-        
+        self._isGoodAfternoonActive = !self._isGoodAfternoonActive
+        self.preferences[PreferenceKeys.goodAfternoon] = self._isGoodAfternoonActive
+        self.saveData()
     }
     
     func changeIsGoodEveningActive(){
-        
+        self._isGoodEveningActive = !self._isGoodEveningActive
+        self.preferences[PreferenceKeys.goodEvening] = self._isGoodEveningActive
+        self.saveData()
     }
     
     func changeIsGoodDawnActive(){
-        
+        self._isGoodDawnActive = !self._isGoodDawnActive
+        self.preferences[PreferenceKeys.goodDawn] = self._isGoodDawnActive
+        self.saveData()
     }
     
-    func changeGoodMorningInterval(){
-        
+    func changeGoodMorningInterval(to time: [IntervalKeys:Time]){
+        self._goodMorningInterval = time
+        self.preferences[PreferenceKeys.goodMorningInterval] = time
+        self.saveData()
     }
     
-    func changeGoodAfternoonIntervar(){
-        
+    func changeGoodAfternoonIntervar(to time: [IntervalKeys:Time]){
+        self._goodAfternoonInterval = time
+        self.preferences[PreferenceKeys.goodAfternoonInterval] = time
+        self.saveData()
     }
     
-    func changeGoodEveningInterval(){
-        
+    func changeGoodEveningInterval(to time: [IntervalKeys:Time]){
+        self._goodEveningInterval = time
+        self.preferences[PreferenceKeys.goodEveningInterval] = time
+        self.saveData()
     }
     
-    func changeGoodDawnInterval(){
-        
+    func changeGoodDawnInterval(to time: [IntervalKeys:Time]){
+        self._goodDawnInterval = time
+        self.preferences[PreferenceKeys.goodDawnInterval] = time
+        self.saveData()
     }
     
-    func changeRadius(){
-        
+    func changeRadius(to value: Int){
+        self._radius = value
+        self.preferences[PreferenceKeys.radius] = value
+        self.saveData()
     }
     
     //MARK: Persistence functions
     
     private func loadData() -> [String:Any]{
-        var defaultPreferences: [String:Any]!
+        var defaultPreference: [String:Any]!
         
-        if let preferences = UserDefaults.standard.dictionary(forKey: PreferenceKey.preferences){
-            defaultPreferences = preferences
+        if let preferences = UserDefaults.standard.dictionary(forKey: PreferenceKeys.preferences){
+            defaultPreference = preferences
         }else{
-            defaultPreferences = [PreferenceKey.music: self._isMusicOn,
-                                  PreferenceKey.sound: self._isSoundOn,
-                                  PreferenceKey.token: self._token]
+            defaultPreference = [
+                PreferenceKeys.keepConnected: self._keepConected,
+                PreferenceKeys.goodMorning: self._isGoodMorningActive,
+                PreferenceKeys.goodAfternoon: self._isGoodAfternoonActive,
+                PreferenceKeys.goodEvening: self._isGoodEveningActive,
+                PreferenceKeys.goodDawn: self._isGoodDawnActive,
+                PreferenceKeys.goodMorningInterval: self._goodMorningInterval,
+                PreferenceKeys.goodAfternoonInterval: self._goodAfternoonInterval,
+                PreferenceKeys.goodEveningInterval: self._goodEveningInterval,
+                PreferenceKeys.goodDawnInterval: self._goodDawnInterval,
+                PreferenceKeys.radius: self._radius
+            ]
         }
         
-        return defaultPreferences
+        return defaultPreference
     }
     
     private func saveData(){
-        UserDefaults.standard.set(self.preferences, forKey: PreferenceKey.preferences)
+        UserDefaults.standard.set(self.preferences, forKey: PreferenceKeys.preferences)
         UserDefaults.standard.synchronize()
     }
 }
