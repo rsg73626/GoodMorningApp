@@ -12,7 +12,7 @@
         <!--Hoje-->
         <scene sceneID="NeR-Sj-hkf">
             <objects>
-                <tableViewController id="pTT-yT-Sab" sceneMemberID="viewController">
+                <tableViewController id="pTT-yT-Sab" customClass="TodayTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vs0-KH-4Fq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
-                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="GcJ-7Z-JKB"/>
+                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="3qJ-fM-fQu"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodMorningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-T5-8Iq">
@@ -47,7 +47,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
-                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="b2R-rK-Iai"/>
+                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="ZS5-Sg-lV0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -77,7 +77,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
-                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="pJw-9y-Vde"/>
+                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="A0H-pl-orR"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodAfternoonClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-tK-NgU">
@@ -85,7 +85,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
-                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="0fT-mZ-HkQ"/>
+                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="XhI-Jh-sG9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -115,7 +115,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
-                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="0Ak-w7-JMc"/>
+                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="s8t-0O-ltE"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodEveningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-6D-lVS">
@@ -123,7 +123,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
-                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="X49-Zr-zgZ"/>
+                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="pbK-EH-e3q"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -153,7 +153,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
-                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="AOU-ek-eS4"/>
+                                                        <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="phV-8U-JfG"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodDawnClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-3K-2s0">
@@ -161,7 +161,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
-                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="4Nv-xa-b04"/>
+                                                        <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="gIU-5B-Z5T"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -179,19 +179,18 @@
                     <navigationItem key="navigationItem" title="Hoje" id="AGs-i1-j0M"/>
                     <size key="freeformSize" width="375" height="1100"/>
                     <connections>
-                        <outlet property="afternoonClear" destination="gTk-tK-NgU" id="wog-kH-YL1"/>
-                        <outlet property="afternoonDone" destination="TOU-Ik-P2o" id="MAf-qM-YfZ"/>
-                        <outlet property="afternoonMessage" destination="Wvh-Ui-Lvr" id="P69-di-nJo"/>
-                        <outlet property="dawnClear" destination="7hm-3K-2s0" id="odF-AU-KtB"/>
-                        <outlet property="dawnDone" destination="qiT-q3-55o" id="81u-Kp-6M1"/>
-                        <outlet property="dawnMessage" destination="7cZ-Cr-mEB" id="BNZ-cY-WpA"/>
-                        <outlet property="eveningClear" destination="XWz-6D-lVS" id="A8w-fR-5P6"/>
-                        <outlet property="eveningDone" destination="NhD-oZ-UD0" id="LxN-lZ-aji"/>
-                        <outlet property="eveningMessage" destination="dkx-o5-OQr" id="3sF-rp-6SB"/>
-                        <outlet property="morningClear" destination="b8g-T5-8Iq" id="LW5-PI-CIT"/>
-                        <outlet property="morningDone" destination="Z4I-8K-aH7" id="bvr-l6-Lay"/>
-                        <outlet property="morningMessage" destination="IDB-Rh-Hh3" id="R5p-EX-HaZ"/>
-                        <outlet property="morningReady" destination="Z4I-8K-aH7" id="PZp-Qe-BnI"/>
+                        <outlet property="afternoonClear" destination="gTk-tK-NgU" id="TCK-nC-ORQ"/>
+                        <outlet property="afternoonDone" destination="TOU-Ik-P2o" id="LM9-qO-hPp"/>
+                        <outlet property="afternoonMessage" destination="Wvh-Ui-Lvr" id="KSc-b5-R6y"/>
+                        <outlet property="dawnClear" destination="7hm-3K-2s0" id="YQE-iV-rGR"/>
+                        <outlet property="dawnDone" destination="qiT-q3-55o" id="jEB-RC-Ga2"/>
+                        <outlet property="dawnMessage" destination="7cZ-Cr-mEB" id="PY0-dQ-4yO"/>
+                        <outlet property="eveningClear" destination="XWz-6D-lVS" id="mOK-26-sCe"/>
+                        <outlet property="eveningDone" destination="NhD-oZ-UD0" id="4Os-7k-8sw"/>
+                        <outlet property="eveningMessage" destination="dkx-o5-OQr" id="gqO-o0-gzg"/>
+                        <outlet property="morningClear" destination="b8g-T5-8Iq" id="SJM-3w-inE"/>
+                        <outlet property="morningDone" destination="Z4I-8K-aH7" id="PS3-4g-ilf"/>
+                        <outlet property="morningMessage" destination="IDB-Rh-Hh3" id="3KH-nc-z3h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nze-wK-z69" userLabel="First Responder" sceneMemberID="firstResponder"/>
