@@ -11,103 +11,243 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed-->
-        <scene sceneID="CGH-Th-38l">
+        <!--Filtro-->
+        <scene sceneID="scv-BA-30V">
             <objects>
-                <tableViewController id="tXt-iP-4A8" customClass="FeedTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gre-sl-p86">
+                <tableViewController id="bZy-Jk-Ipy" customClass="FilterTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bxh-qM-R4S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="J20-Ik-my8">
+                            <tableViewSection headerTitle="Tipo" id="jpc-cQ-hWf">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="greeting" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="greeting" rowHeight="200" id="wrJ-Zo-1nV" customClass="GreetingTableViewCell" customModule="GoodMorningApp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WeY-KW-efJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wrJ-Zo-1nV" id="xsL-Tu-00a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WeY-KW-efJ" id="IJM-h2-Y5K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bom dia!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-Lu-d9X">
-                                                    <rect key="frame" x="16" y="26" width="67" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bom dia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuL-2X-IOH">
+                                                    <rect key="frame" x="16" y="12" width="63" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="Ntb-cA-ND1">
-                                                    <rect key="frame" x="162" y="11" width="50" height="50"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="morningFilter" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPn-CV-f7s">
+                                                    <rect key="frame" x="312" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH7-Om-i0Q">
-                                                    <rect key="frame" x="220" y="25" width="131" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" editable="NO" text="Essa vai ser a mensagem de bom dia, boa tarde, boa noite ou boa madrugada do usuário. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-PO-9KP">
-                                                    <rect key="frame" x="16" y="69" width="343" height="82"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSy-2Z-f4k">
-                                                    <rect key="frame" x="16" y="159" width="35" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Ação"/>
-                                                </button>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="bZy-Jk-Ipy" eventType="valueChanged" id="nMd-Hg-r0X"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5WA-z8-0Wv">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5WA-z8-0Wv" id="h0q-rI-3m9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boa tarde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93p-g8-itm">
+                                                    <rect key="frame" x="16" y="11" width="74" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="afternoonFilter" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wk-P3-uBe">
+                                                    <rect key="frame" x="310" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3bj-do-jVg">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3bj-do-jVg" id="Edw-wd-SIR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boa noite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBz-Gk-CZq">
+                                                    <rect key="frame" x="16" y="11" width="72" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="eveningFilter" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTb-ue-kfF">
+                                                    <rect key="frame" x="310" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="550-OP-6Gr">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="550-OP-6Gr" id="fX9-6Y-kFU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boa madrugada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFi-Kt-5Ha">
+                                                    <rect key="frame" x="16" y="12" width="121" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="dawnFilter" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avp-K8-4LR">
+                                                    <rect key="frame" x="310" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Ação" id="PzC-N1-o3S">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QSs-AO-TpR">
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QSs-AO-TpR" id="UdH-Yy-hXw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="action" translatesAutoresizingMaskIntoConstraints="NO" id="hZR-vj-Ca2">
+                                                    <rect key="frame" x="0.0" y="-60" width="375" height="162"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="bZy-Jk-Ipy" id="LYR-rF-zTY"/>
+                                                        <outlet property="delegate" destination="bZy-Jk-Ipy" id="VEh-EW-UrE"/>
+                                                    </connections>
+                                                </pickerView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tempo" id="aL9-tJ-ANk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U1v-ri-EcW">
+                                        <rect key="frame" x="0.0" y="304" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1v-ri-EcW" id="JVP-jE-2gM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="time" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-03-Fqy">
+                                                    <rect key="frame" x="0.0" y="-60" width="375" height="162"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="bZy-Jk-Ipy" id="DbF-qn-fO1"/>
+                                                        <outlet property="delegate" destination="bZy-Jk-Ipy" id="BPg-vf-vta"/>
+                                                    </connections>
+                                                </pickerView>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="tXt-iP-4A8" id="Nt6-Xi-uZG"/>
-                            <outlet property="delegate" destination="tXt-iP-4A8" id="eNo-js-0Iw"/>
+                            <outlet property="dataSource" destination="bZy-Jk-Ipy" id="fHE-Ef-ECb"/>
+                            <outlet property="delegate" destination="bZy-Jk-Ipy" id="muX-Kz-Qap"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feed" id="NaG-Pc-lJ0">
-                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="uKe-WR-eh7"/>
+                    <navigationItem key="navigationItem" title="Filtro" id="q9w-oZ-pvY">
+                        <barButtonItem key="rightBarButtonItem" title="Pronto" id="OIT-iY-tMD"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="action" destination="hZR-vj-Ca2" id="jL5-MB-qVc"/>
+                        <outlet property="afternoon" destination="6wk-P3-uBe" id="qTk-Cu-XBU"/>
+                        <outlet property="dawn" destination="avp-K8-4LR" id="PLs-Ke-XRu"/>
+                        <outlet property="evening" destination="nTb-ue-kfF" id="ht9-Fz-dkP"/>
+                        <outlet property="morning" destination="dPn-CV-f7s" id="ZGr-sh-181"/>
+                        <outlet property="time" destination="4x8-03-Fqy" id="XBB-YI-bMa"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="90q-9C-D2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4264.8000000000002" y="119.1904047976012"/>
-        </scene>
-        <!--Filtro-->
-        <scene sceneID="TRd-Tt-e5L">
-            <objects>
-                <viewController id="rFn-O2-oLj" customClass="FilterViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6mS-Cx-IcL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="fmu-iZ-Xg6"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Filtro" id="hgP-xf-WdQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9XA-i9-rGX"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BiJ-oP-sK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exu-xs-0Ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2236" y="-38.23088455772114"/>
         </scene>
-        <!--Cumprimento-->
+        <!--Bom dia-->
         <scene sceneID="zpg-a1-E71">
             <objects>
                 <viewController id="sOc-k0-uHh" customClass="GreetingViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7DS-6u-ZRi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Mensagem de Bom dia, Boa tarde, Boa noite ou Boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gs1-FX-j8O">
+                                <rect key="frame" x="16" y="80" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ8-aa-FRs">
+                                <rect key="frame" x="16" y="216" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ação"/>
+                                <connections>
+                                    <action selector="actionTapped:" destination="sOc-k0-uHh" eventType="touchUpInside" id="j8Y-f3-eCa"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="h7w-d5-sZW">
+                                <rect key="frame" x="16" y="254" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLJ-os-Bnr">
+                                <rect key="frame" x="124" y="294" width="235" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sobre este usuário." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-8r-i4k">
+                                <rect key="frame" x="16" y="362" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hub-gH-7jN">
+                                <rect key="frame" x="156" y="498" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-uY-IVo">
+                                <rect key="frame" x="16" y="527" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="11 91234 5678"/>
+                                <connections>
+                                    <action selector="contactTapped:" destination="sOc-k0-uHh" eventType="touchUpInside" id="2yt-EQ-bKI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yqx-ta-SHo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cumprimento" id="Sfd-dP-Xvl"/>
+                    <navigationItem key="navigationItem" title="Bom dia" id="Sfd-dP-Xvl"/>
+                    <connections>
+                        <outlet property="about" destination="2ah-8r-i4k" id="f6j-Bl-hCG"/>
+                        <outlet property="action" destination="TJ8-aa-FRs" id="5SU-3x-0uk"/>
+                        <outlet property="contact" destination="HaH-uY-IVo" id="mlQ-BR-y2H"/>
+                        <outlet property="message" destination="Gs1-FX-j8O" id="7pp-5q-Lgo"/>
+                        <outlet property="userName" destination="yLJ-os-Bnr" id="hJa-lA-Sjw"/>
+                        <outlet property="userPhoto" destination="h7w-d5-sZW" id="V2Y-aj-X48"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE9-FY-zkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +281,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="KCG-Ls-VvO">
+                                            <rect key="frame" x="162" y="11" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="QOk-qh-W98"/>
+                                                <constraint firstAttribute="width" constant="50" id="ijF-E2-Jbh"/>
+                                            </constraints>
+                                        </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Essa será a mensagem de bom dia, boa tarde, boa noite ou boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-K6-Sn1">
                                             <rect key="frame" x="16" y="69" width="343" height="80"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,13 +297,6 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfil" translatesAutoresizingMaskIntoConstraints="NO" id="KCG-Ls-VvO">
-                                            <rect key="frame" x="162" y="11" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="QOk-qh-W98"/>
-                                                <constraint firstAttribute="width" constant="50" id="ijF-E2-Jbh"/>
-                                            </constraints>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpA-cs-4ol">
                                             <rect key="frame" x="16" y="157" width="35" height="30"/>
                                             <state key="normal" title="Ação"/>
@@ -179,6 +319,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="action" destination="vpA-cs-4ol" id="xA0-Ey-9uq"/>
+                                    <outlet property="message" destination="Biz-K6-Sn1" id="mgk-Ei-ohl"/>
+                                    <outlet property="title" destination="YNL-LX-J3Z" id="uOj-D1-6nm"/>
+                                    <outlet property="userName" destination="Rbt-jV-Kbp" id="HWr-Cv-Pxp"/>
+                                    <outlet property="userPhoto" destination="KCG-Ls-VvO" id="wDJ-cE-EuT"/>
                                     <segue destination="sOc-k0-uHh" kind="show" id="mxs-qK-WxJ"/>
                                 </connections>
                             </tableViewCell>
@@ -191,7 +336,7 @@
                     <navigationItem key="navigationItem" title="Feed" id="iK5-KT-zUS">
                         <barButtonItem key="rightBarButtonItem" title="Filtrar" id="Edc-w0-uQk">
                             <connections>
-                                <segue destination="rFn-O2-oLj" kind="show" id="UIx-v6-yvz"/>
+                                <segue destination="bZy-Jk-Ipy" kind="show" id="30V-4M-1r0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -11,6 +11,11 @@ import UIKit
 class GreetingTableViewCell: UITableViewCell {
     
     //MARK: Outlets
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet weak var message: UITextView!
+    @IBOutlet weak var action: UIButton!
     
 
     override func awakeFromNib() {
