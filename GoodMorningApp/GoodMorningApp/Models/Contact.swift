@@ -8,19 +8,19 @@
 
 import Foundation
 
-class Contact{
-    
-    //MARK: Types
-    enum ContactType{
-        case Cellphone
-        case SocialNetwork
-        case Other
-    }
+class Contact: Codable{
     
     //MARK: Properties
     var id: Int?
-    var content: String?
+    var content: String
     var type: ContactType
+    
+    //MARK: Types
+    enum CodingKeys: String, CodingKey {
+        case Id = "id"
+        case Content = "content"
+        case ContactType = "type"
+    }
     
     //MARK: Initializers
     init(content: String, type: ContactType) {
@@ -28,5 +28,19 @@ class Contact{
         self.type = type
     }
     
+    //MARK: Codable
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try values.decode(Int.self, forKey: .Id)
+        self.content = try values.decode(String.self, forKey: .Content)
+        let type = try values.decode(Int.self, forKey: .ContactType)
+        self.type = type == 1 ? ContactType.Cellphone : type == 2 ? ContactType.SocialNetwork : ContactType.Other
+    }
     
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.id, forKey: .Id)
+        try container.encode(self.content, forKey: .Content)
+        try container.encode(self.type.rawValue, forKey: .ContactType)
+    }
 }
