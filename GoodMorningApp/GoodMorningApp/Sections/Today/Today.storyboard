@@ -27,30 +27,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Entre com sua mensagem personalizada de bom dia." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-Rh-Hh3">
-                                                    <rect key="frame" x="16" y="11" width="343" height="147"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Entre com sua mensagem personalizada de bom dia." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-Rh-Hh3">
+                                                    <rect key="frame" x="8" y="8" width="359" height="147"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="147" id="p72-OE-GVi"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodMorningDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-8K-aH7">
-                                                    <rect key="frame" x="16" y="164" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodMorningDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-8K-aH7">
+                                                    <rect key="frame" x="8" y="163" width="46" height="30"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
                                                         <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="3qJ-fM-fQu"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodMorningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-T5-8Iq">
-                                                    <rect key="frame" x="70" y="164" width="47" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodMorningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-T5-8Iq">
+                                                    <rect key="frame" x="70" y="163" width="47" height="30"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
                                                         <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="ZS5-Sg-lV0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="b8g-T5-8Iq" firstAttribute="top" secondItem="IDB-Rh-Hh3" secondAttribute="bottom" constant="8" id="2jo-Ld-2GR"/>
+                                                <constraint firstItem="Z4I-8K-aH7" firstAttribute="top" secondItem="IDB-Rh-Hh3" secondAttribute="bottom" constant="8" id="JgG-1P-MMl"/>
+                                                <constraint firstItem="b8g-T5-8Iq" firstAttribute="leading" secondItem="Z4I-8K-aH7" secondAttribute="trailing" constant="16" id="aQU-62-3p2"/>
+                                                <constraint firstItem="Z4I-8K-aH7" firstAttribute="leading" secondItem="Kn5-7v-3z6" secondAttribute="leading" constant="8" id="boM-zA-uud"/>
+                                                <constraint firstItem="IDB-Rh-Hh3" firstAttribute="centerX" secondItem="Kn5-7v-3z6" secondAttribute="centerX" id="cyO-zM-S6l"/>
+                                                <constraint firstAttribute="trailing" secondItem="IDB-Rh-Hh3" secondAttribute="trailing" constant="8" id="eqA-bT-Utn"/>
+                                                <constraint firstItem="IDB-Rh-Hh3" firstAttribute="top" secondItem="Kn5-7v-3z6" secondAttribute="top" constant="8" id="ish-WK-ZOA"/>
+                                                <constraint firstItem="IDB-Rh-Hh3" firstAttribute="leading" secondItem="Kn5-7v-3z6" secondAttribute="leading" constant="8" id="zXG-TZ-2Oi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -65,30 +75,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Entre com sua mensagem personalizada de boa tarde." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wvh-Ui-Lvr">
-                                                    <rect key="frame" x="16" y="11" width="343" height="147"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Entre com sua mensagem personalizada de boa tarde." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wvh-Ui-Lvr">
+                                                    <rect key="frame" x="8" y="8" width="359" height="147"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="147" id="2Zc-8c-YgX"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodAfternoonDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-Ik-P2o">
-                                                    <rect key="frame" x="16" y="164" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodAfternoonDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-Ik-P2o">
+                                                    <rect key="frame" x="8" y="163" width="46" height="30"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
                                                         <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="A0H-pl-orR"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodAfternoonClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-tK-NgU">
-                                                    <rect key="frame" x="70" y="164" width="47" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodAfternoonClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-tK-NgU">
+                                                    <rect key="frame" x="70" y="163" width="47" height="30"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
                                                         <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="XhI-Jh-sG9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gTk-tK-NgU" firstAttribute="top" secondItem="Wvh-Ui-Lvr" secondAttribute="bottom" constant="8" id="4p5-Lm-KBo"/>
+                                                <constraint firstItem="Wvh-Ui-Lvr" firstAttribute="leading" secondItem="5lr-m6-Yc6" secondAttribute="leading" constant="8" id="63M-GH-LPF"/>
+                                                <constraint firstItem="TOU-Ik-P2o" firstAttribute="leading" secondItem="5lr-m6-Yc6" secondAttribute="leading" constant="8" id="brD-kk-q1p"/>
+                                                <constraint firstItem="Wvh-Ui-Lvr" firstAttribute="top" secondItem="5lr-m6-Yc6" secondAttribute="top" constant="8" id="cUF-GF-0Zn"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wvh-Ui-Lvr" secondAttribute="trailing" constant="8" id="eHh-oU-l0N"/>
+                                                <constraint firstItem="TOU-Ik-P2o" firstAttribute="top" secondItem="Wvh-Ui-Lvr" secondAttribute="bottom" constant="8" id="hCu-5X-aht"/>
+                                                <constraint firstItem="gTk-tK-NgU" firstAttribute="leading" secondItem="TOU-Ik-P2o" secondAttribute="trailing" constant="16" id="jFD-Al-hLh"/>
+                                                <constraint firstItem="Wvh-Ui-Lvr" firstAttribute="centerX" secondItem="5lr-m6-Yc6" secondAttribute="centerX" id="nAc-u5-DwH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -103,30 +123,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Entre com sua mensagem personalizada de boa noite." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-o5-OQr">
-                                                    <rect key="frame" x="16" y="11" width="343" height="147"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Entre com sua mensagem personalizada de boa noite." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-o5-OQr">
+                                                    <rect key="frame" x="8" y="8" width="359" height="147"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="147" id="Zok-Ka-SHw"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodEveningDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhD-oZ-UD0">
-                                                    <rect key="frame" x="16" y="164" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodEveningDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhD-oZ-UD0">
+                                                    <rect key="frame" x="8" y="163" width="46" height="30"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
                                                         <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="s8t-0O-ltE"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodEveningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-6D-lVS">
-                                                    <rect key="frame" x="70" y="164" width="47" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodEveningClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-6D-lVS">
+                                                    <rect key="frame" x="70" y="163" width="47" height="30"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
                                                         <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="pbK-EH-e3q"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XWz-6D-lVS" firstAttribute="top" secondItem="dkx-o5-OQr" secondAttribute="bottom" constant="8" id="0Rk-AW-7EY"/>
+                                                <constraint firstItem="dkx-o5-OQr" firstAttribute="leading" secondItem="HOG-A2-WJh" secondAttribute="leading" constant="8" id="LQg-v5-5ML"/>
+                                                <constraint firstItem="XWz-6D-lVS" firstAttribute="leading" secondItem="NhD-oZ-UD0" secondAttribute="trailing" constant="16" id="ZuF-2C-cvW"/>
+                                                <constraint firstItem="NhD-oZ-UD0" firstAttribute="leading" secondItem="HOG-A2-WJh" secondAttribute="leading" constant="8" id="oPr-lI-zb9"/>
+                                                <constraint firstItem="NhD-oZ-UD0" firstAttribute="top" secondItem="dkx-o5-OQr" secondAttribute="bottom" constant="8" id="wkR-od-kY4"/>
+                                                <constraint firstAttribute="trailing" secondItem="dkx-o5-OQr" secondAttribute="trailing" constant="8" id="xGp-t7-zuR"/>
+                                                <constraint firstItem="dkx-o5-OQr" firstAttribute="top" secondItem="HOG-A2-WJh" secondAttribute="top" constant="8" id="yrk-Qw-Suj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -141,30 +170,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Entre com sua mensagem personalizada de boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7cZ-Cr-mEB">
-                                                    <rect key="frame" x="16" y="11" width="343" height="147"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Entre com sua mensagem personalizada de boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7cZ-Cr-mEB">
+                                                    <rect key="frame" x="8" y="8" width="359" height="147"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="147" id="whL-Qr-7IU"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodDawnDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-q3-55o">
-                                                    <rect key="frame" x="16" y="164" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodDawnDone" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-q3-55o">
+                                                    <rect key="frame" x="8" y="163" width="46" height="30"/>
                                                     <state key="normal" title="Pronto"/>
                                                     <connections>
                                                         <action selector="doneTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="phV-8U-JfG"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="GoodDawnClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-3K-2s0">
-                                                    <rect key="frame" x="70" y="164" width="47" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="GoodDawnClear" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-3K-2s0">
+                                                    <rect key="frame" x="70" y="163" width="47" height="30"/>
                                                     <state key="normal" title="Limpar"/>
                                                     <connections>
                                                         <action selector="clearTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="gIU-5B-Z5T"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7cZ-Cr-mEB" firstAttribute="centerX" secondItem="2wt-h9-nfE" secondAttribute="centerX" id="6h3-t8-Gk7"/>
+                                                <constraint firstItem="qiT-q3-55o" firstAttribute="leading" secondItem="2wt-h9-nfE" secondAttribute="leading" constant="8" id="P2O-fg-HgH"/>
+                                                <constraint firstItem="7hm-3K-2s0" firstAttribute="leading" secondItem="qiT-q3-55o" secondAttribute="trailing" constant="16" id="QVb-Ac-WAi"/>
+                                                <constraint firstAttribute="trailing" secondItem="7cZ-Cr-mEB" secondAttribute="trailing" constant="8" id="RnG-xD-KdE"/>
+                                                <constraint firstItem="7cZ-Cr-mEB" firstAttribute="top" secondItem="2wt-h9-nfE" secondAttribute="top" constant="8" id="ihY-BO-rYS"/>
+                                                <constraint firstItem="7cZ-Cr-mEB" firstAttribute="leading" secondItem="2wt-h9-nfE" secondAttribute="leading" constant="8" id="mlM-Ah-JFl"/>
+                                                <constraint firstItem="7hm-3K-2s0" firstAttribute="top" secondItem="7cZ-Cr-mEB" secondAttribute="bottom" constant="8" id="sE7-3e-Cok"/>
+                                                <constraint firstItem="qiT-q3-55o" firstAttribute="top" secondItem="7cZ-Cr-mEB" secondAttribute="bottom" constant="8" id="x4g-nM-GcW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>

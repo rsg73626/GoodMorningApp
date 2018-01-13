@@ -32,6 +32,15 @@ class TodayTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("started did appear")
+        ActivityIndicatorManager.shared.start(to: self)
+        sleep(5)
+        ActivityIndicatorManager.shared.stop()
+        print("ended did appear")
+    }
+    
     //MARK: Actions
     @IBAction func doneTapped(_ sender: Any) {
     }
