@@ -11,9 +11,9 @@ import Foundation
 class Contact: Codable{
     
     //MARK: Properties
-    var id: Int?
-    var content: String
-    var type: ContactType
+    var id: Int? = 0
+    var content: String!
+    var type: ContactType!
     
     //MARK: Types
     enum CodingKeys: String, CodingKey {
@@ -24,6 +24,7 @@ class Contact: Codable{
     
     //MARK: Initializers
     init(content: String, type: ContactType) {
+        self.id = nil
         self.content = content
         self.type = type
     }
@@ -31,7 +32,7 @@ class Contact: Codable{
     //MARK: Codable
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try values.decode(Int.self, forKey: .Id)
+        do { self.id = try values.decode(Int.self, forKey: .Id) } catch { self.id = nil }
         self.content = try values.decode(String.self, forKey: .Content)
         let type = try values.decode(Int.self, forKey: .ContactType)
         self.type = type == 1 ? ContactType.Cellphone : type == 2 ? ContactType.SocialNetwork : ContactType.Other
@@ -41,6 +42,5 @@ class Contact: Codable{
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .Id)
         try container.encode(self.content, forKey: .Content)
-        try container.encode(self.type.rawValue, forKey: .ContactType)
-    }
-}
+        try container.encode(self.type?.rawValue, forKey: .ContactType)
+    }}

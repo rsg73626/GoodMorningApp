@@ -1,33 +1,38 @@
 //
-//  FilterTableViewController.swift
+//  FilterViewController.swift
 //  GoodMorningApp
 //
-//  Created by Renan Soares Germano on 10/01/2018.
+//  Created by Renan Soares Germano on 21/01/2018.
 //  Copyright © 2018 Renan Soares Germano. All rights reserved.
 //
 
 import UIKit
 
-class FilterTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     //MARK: Properties
     private let actions = ["Nenhuma", "Retribuiu", "Curtiu"]
     private let times = ["Hoje", "Essa semana", "Esse mês"]
     
     //MARK: Outlets
+    @IBOutlet weak var typeHeader: UIView!
     @IBOutlet weak var morning: UISwitch!
     @IBOutlet weak var afternoon: UISwitch!
     @IBOutlet weak var evening: UISwitch!
     @IBOutlet weak var dawn: UISwitch!
+    
+    @IBOutlet weak var actionHeader: UIView!
     @IBOutlet weak var action: UIPickerView!
+    
+    @IBOutlet weak var timeHeader: UIView!
     @IBOutlet weak var time: UIPickerView!
     
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setUpHeaders()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,17 +66,17 @@ class FilterTableViewController: UITableViewController, UIPickerViewDataSource, 
     
     //MARK: Actions
     @IBAction func switchChanged(_ sender: UISwitch) {
-        switch sender.restorationIdentifier ?? ""{
-        case "morningFilter":
+        switch sender {
+        case self.morning:
             
             break
-        case "afternoonFilter":
+        case self.afternoon:
             
             break
-        case "eveningFilter":
+        case self.evening:
             
             break
-        case "dawnFilter":
+        case self.dawn:
             
             break
         default:
@@ -79,15 +84,24 @@ class FilterTableViewController: UITableViewController, UIPickerViewDataSource, 
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
-}
+    
+    //MARK: SetUp functions
+    private func setUpHeaders() {
+        self.typeHeader.backgroundColor = AppColor.blue
+        self.actionHeader.backgroundColor = AppColor.blue
+        self.timeHeader.backgroundColor = AppColor.blue
+    }
+    
+    /*
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+} 

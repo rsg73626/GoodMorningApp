@@ -11,21 +11,33 @@ import UIKit
 class AdjustsTableViewController: UITableViewController {
     
     //MARK: Outlets
+    @IBOutlet weak var morningHeader: UIView!
+    @IBOutlet weak var morningTitle: UILabel!
+    @IBOutlet weak var morningInterval: UILabel!
     @IBOutlet weak var morning: UISwitch!
+    @IBOutlet weak var morningInfo: UIButton!
     @IBOutlet weak var morningFrom: UIDatePicker!
-    @IBOutlet weak var morningTo: UIDatePicker!
     
+    @IBOutlet weak var afeternoonHeader: UIView!
+    @IBOutlet weak var afternoonTitle: UILabel!
+    @IBOutlet weak var afternoonInterval: UILabel!
     @IBOutlet weak var afternoon: UISwitch!
+    @IBOutlet weak var afternoonInfo: UIButton!
     @IBOutlet weak var afternoonFrom: UIDatePicker!
-    @IBOutlet weak var afternoonTo: UIDatePicker!
     
+    @IBOutlet weak var eveningHeader: UIView!
+    @IBOutlet weak var eveningTitle: UILabel!
+    @IBOutlet weak var eveningInterval: UILabel!
     @IBOutlet weak var evening: UISwitch!
+    @IBOutlet weak var eveningInfo: UIButton!
     @IBOutlet weak var eveningFrom: UIDatePicker!
-    @IBOutlet weak var eveningTo: UIDatePicker!
     
+    @IBOutlet weak var dawnHeader: UIView!
+    @IBOutlet weak var dawnTitle: UILabel!
+    @IBOutlet weak var dawnInterval: UILabel!
     @IBOutlet weak var dawn: UISwitch!
+    @IBOutlet weak var dawnInfo: UIButton!
     @IBOutlet weak var dawnFrom: UIDatePicker!
-    @IBOutlet weak var dawnTo: UIDatePicker!
     
     @IBOutlet weak var notificationRadius: UISlider!
     @IBOutlet weak var radius: UILabel!
@@ -33,94 +45,118 @@ class AdjustsTableViewController: UITableViewController {
     //MARK: Properties
     let preferences: PreferenceManager = PreferenceManager.shared
     
-    //MARK: Types
-    private struct PickerIdentifier{
-        static let morningFrom = "morningFrom"
-        static let morningTo = "morningTo"
-        static let afternoonFrom = "afternoonFrom"
-        static let afternoonTo = "afternoonTo"
-        static let eveningFrom = "eveningFrom"
-        static let eveningTo = "eveningTo"
-        static let dawnFrom = "dawnFrom"
-        static let dawnTo = "dawnTo"
-    }
-    
-    private struct SwitchIdentifier{
-        static let morning = "morning"
-        static let afternoon = "afternoon"
-        static let evening = "evening"
-        static let dawn = "dawn"
-    }
-    
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setUpGoodMorning()
         self.setUpGoodAfternoon()
         self.setUpGoodEvening()
         self.setUpGoodDawn()
-        
-        self.notificationRadius.setValue(Float(self.preferences.radius), animated: false)
-        self.updateRadiusLabel(to: self.preferences.radius)
+        self.setUpNotificationRadius()
+    }
+    
+    //MARK: UITableView functions
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section > 0 {
+            return 40.0
+        }
+        return 0.0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = AppColor.lightBlue
+        let label = UILabel()
+        label.frame = CGRect(x: 16, y: (40-20.5)/2, width: 200, height: 20.5)
+        label.text = section == 1 ? "Radio de notificação" : "Desenvolvedores"
+        label.textColor = UIColor.white
+        view.addSubview(label)
+        return view
     }
     
     //MARK: Set up functions
-    private func setUpGoodMorning(){
+    private func setUpGoodMorning() {
+        self.morningHeader.backgroundColor = AppColor.lightBlue
         self.morning.isOn = self.preferences.isGoodMorningActive
         self.morningFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.morningFrom.setDate(self.preferences.goodMorningInterval.from, animated: false)
-        self.morningTo.timeZone = TimeZone.init(secondsFromGMT: 0)
-        self.morningTo.setDate(self.preferences.goodMorningInterval.to, animated: false)
+        
         self.updateGoodMorning()
     }
     
     private func setUpGoodAfternoon(){
+        self.afeternoonHeader.backgroundColor = AppColor.lightBlue
         self.afternoon.isOn = self.preferences.isGoodAfternoonActive
         self.afternoonFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.afternoonFrom.setDate(self.preferences.goodAfternoonInterval.from, animated: false)
-        self.afternoonTo.timeZone = TimeZone.init(secondsFromGMT: 0)
-        self.afternoonTo.setDate(self.preferences.goodAfternoonInterval.to, animated: false)
         self.updateGoodAfternoon()
     }
     
     private func setUpGoodEvening(){
+        self.eveningHeader.backgroundColor = AppColor.lightBlue
         self.evening.isOn = self.preferences.isGoodEveningActive
         self.eveningFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.eveningFrom.setDate(self.preferences.goodEveningInterval.from, animated: false)
-        self.eveningTo.timeZone = TimeZone.init(secondsFromGMT: 0)
-        self.eveningTo.setDate(self.preferences.goodEveningInterval.to, animated: false)
         self.updateGoodEvening()
     }
     
     private func setUpGoodDawn(){
+        self.dawnHeader.backgroundColor = AppColor.lightBlue
         self.dawn.isOn = self.preferences.isGoodDawnActive
         self.dawnFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.dawnFrom.setDate(self.preferences.goodDawnInterval.from, animated: false)
-        self.dawnTo.timeZone = TimeZone.init(secondsFromGMT: 0)
-        self.dawnTo.setDate(self.preferences.goodDawnInterval.to, animated: false)
         self.updateGoodDawn()
+    }
+    
+    private func setUpNotificationRadius() {
+        self.notificationRadius.setValue(Float(self.preferences.radius), animated: false)
+        self.updateRadiusLabel(to: self.preferences.radius)
     }
     
     //MARK: Update functions
     private func updateGoodMorning(){
         self.morningFrom.isEnabled = self.morning.isOn
-        self.morningTo.isEnabled = self.morning.isOn
+        self.morningInfo.isEnabled = self.morning.isOn
+        
     }
     
     private func updateGoodAfternoon(){
         self.afternoonFrom.isEnabled = self.afternoon.isOn
-        self.afternoonTo.isEnabled = self.afternoon.isOn
+        self.afternoonInfo.isEnabled = self.afternoon.isOn
     }
     
     private func updateGoodEvening(){
         self.eveningFrom.isEnabled = self.evening.isOn
-        self.eveningTo.isEnabled = self.evening.isOn
+        self.eveningInfo.isEnabled = self.evening.isOn
     }
     
     private func updateGoodDawn(){
         self.dawnFrom.isEnabled = self.dawn.isOn
-        self.dawnTo.isEnabled = self.dawn.isOn
+        self.dawnInfo.isEnabled = self.dawn.isOn
+    }
+    
+    private func updateGoodMorningInterval() {
+        let from = Parser.shared.dateToString(self.morningFrom.date, format: "HH:mm") ?? ""
+        let to = Parser.shared.dateToString(self.afternoonFrom.date, format: "HH:mm") ?? ""
+        self.morningInterval.text = "\(from) - \(to)"
+    }
+    
+    private func updateGoodAfternoonInterval() {
+        let from = Parser.shared.dateToString(self.afternoonFrom.date, format: "HH:mm") ?? ""
+        let to = Parser.shared.dateToString(self.eveningFrom.date, format: "HH:mm") ?? ""
+        self.afternoonInterval.text = "\(from) - \(to)"
+    }
+    
+    private func updateGoodEveningInterval() {
+        let from = Parser.shared.dateToString(self.eveningFrom.date, format: "HH:mm") ?? ""
+        let to = Parser.shared.dateToString(self.dawnFrom.date, format: "HH:mm") ?? ""
+        self.eveningInterval.text = "\(from) - \(to)"
+    }
+    
+    private func updateGoodDawnInterval() {
+        let from = Parser.shared.dateToString(self.dawnFrom.date, format: "HH:mm") ?? ""
+        let to = Parser.shared.dateToString(self.morningFrom.date, format: "HH:mm") ?? ""
+        self.dawnInterval.text = "\(from) - \(to)"
     }
     
     private func updateRadiusLabel(to value: Int){
@@ -129,58 +165,49 @@ class AdjustsTableViewController: UITableViewController {
     
     //MARK: Actions
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-        print("\(sender.restorationIdentifier) Date Picker changed!")
         let date = sender.date
-        switch sender.restorationIdentifier ?? ""{
-        case PickerIdentifier.morningFrom:
+        switch sender {
+        case self.morningFrom:
             self.preferences.changeGoodMorningInterval(key: .From, to: date)
+            self.updateGoodMorningInterval()
             break
-        case PickerIdentifier.morningTo:
-            self.preferences.changeGoodMorningInterval(key: .To, to: date)
-            break
-        case PickerIdentifier.afternoonFrom:
+        case self.afternoonFrom:
             self.preferences.changeGoodAfternoonIntervar(key: .From, to: date)
+            self.updateGoodAfternoonInterval()
             break
-        case PickerIdentifier.afternoonTo:
-            self.preferences.changeGoodAfternoonIntervar(key: .To, to: date)
-            break
-        case PickerIdentifier.eveningFrom:
+        case self.eveningFrom:
             self.preferences.changeGoodEveningInterval(key: .From, to: date)
+            self.updateGoodEveningInterval()
             break
-        case PickerIdentifier.eveningTo:
-            self.preferences.changeGoodEveningInterval(key: .To, to: date)
-            break
-        case PickerIdentifier.dawnFrom:
+        case self.dawnFrom:
             self.preferences.changeGoodDawnInterval(key: .From, to: date)
-            break
-        case PickerIdentifier.dawnTo:
-            self.preferences.changeGoodDawnInterval(key: .To, to: date)
+            self.updateGoodDawnInterval()
             break
         default:
-            print("No Date Picker Identifier found!")
+            print("No Date Picker  found!")
         }
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
-        switch sender.restorationIdentifier ?? "" {
-        case SwitchIdentifier.morning:
+        switch sender {
+        case self.morning:
             self.preferences.changeIsGoodMorningActive()
             self.updateGoodMorning()
             break
-        case SwitchIdentifier.afternoon:
+        case self.afternoon:
             self.preferences.changeIsGoodAfternoonActive()
             self.updateGoodAfternoon()
             break
-        case SwitchIdentifier.evening:
+        case self.evening:
             self.preferences.changeIsGoodEveningActive()
             self.updateGoodEvening()
             break
-        case SwitchIdentifier.dawn:
+        case self.dawn:
             self.preferences.changeIsGoodDawnActive()
             self.updateGoodDawn()
             break
         default:
-            print("No Switch Identifier found!")
+            print("No Switch found!")
         }
     }
     
@@ -188,6 +215,50 @@ class AdjustsTableViewController: UITableViewController {
         let currentValue = Int(sender.value)
         self.preferences.changeRadius(to: currentValue)
         self.updateRadiusLabel(to: currentValue)
+    }
+    
+    @IBAction func restoreAdjustsButtonTapped(_ sender: Any) {
+        let message = "Tem certeza que deseja restaurar os ajustes? Isso fará os ajustes voltarem para o seu estado original e sua configuração atual será perdida."
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let restoreAction = UIAlertAction(title: "Restaurar", style: .destructive, handler: { action in
+            ActivityIndicatorManager.shared.start(to: self)
+            self.morning.setOn(true, animated: false)
+            self.switchChanged(self.morning)
+            self.afternoon.setOn(true, animated: false)
+            self.switchChanged(self.afternoon)
+            self.evening.setOn(true, animated: false)
+            self.switchChanged(self.evening)
+            self.dawn.setOn(true, animated: false)
+            self.switchChanged(self.dawn)
+            self.morningFrom.setDate(Parser.shared.stringToDate("06:01", format: "HH:mm")!, animated: false)
+            self.datePickerChanged(self.morningFrom)
+            self.afternoonFrom.setDate(Parser.shared.stringToDate("12:01", format: "HH:mm")!, animated: false)
+            self.datePickerChanged(self.afternoonFrom)
+            self.eveningFrom.setDate(Parser.shared.stringToDate("18:01", format: "HH:mm")!, animated: false)
+            self.datePickerChanged(self.eveningFrom)
+            self.dawnFrom.setDate(Parser.shared.stringToDate("00:01", format: "HH:mm")!, animated: false)
+            self.datePickerChanged(self.dawnFrom)
+            self.notificationRadius.setValue(5, animated: false)
+            self.radiusChanged(self.notificationRadius)
+            ActivityIndicatorManager.shared.stop()
+        })
+        
+        let alert = UIAlertController(title: "Restaurar ajustes", message: message, preferredStyle: .alert)
+        alert.addAction(restoreAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func infoButtonTapped(_ sender: UIButton) {
+        let message = "Todas os cumprimentos do tipo \(sender.restorationIdentifier ?? "") serão enviados e recebidos a partir deste horário, até o inicio do horário do próximo cumprimento."
+        let alert = UIAlertController(title: "Horário de cumprimento", message: message, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Entendi", comment: "Informações sobre o horário de cumprimento."),
+                style: .default,
+                handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     /*

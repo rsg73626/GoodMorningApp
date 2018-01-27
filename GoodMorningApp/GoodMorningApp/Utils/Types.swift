@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: ALIAS
 typealias Interval = (from: Date, to: Date)
@@ -31,6 +32,29 @@ enum IntervalKey: String{
 }
 
 //MARK: STRUCTS
+struct TabBarIconImages {
+    static let feed = #imageLiteral(resourceName: "feed")
+    static let feedSelected = #imageLiteral(resourceName: "feed_selected")
+    static let today = #imageLiteral(resourceName: "today")
+    static let todaySelected = #imageLiteral(resourceName: "today_selected")
+    static let adjusts = #imageLiteral(resourceName: "adjusts")
+    static let adjustsSelected = #imageLiteral(resourceName: "adjusts_selected")
+}
+
+struct APIURLs {
+    private static let domain = "http://ec2-18-220-95-177.us-east-2.compute.amazonaws.com/api"
+    static var user: String {get {return domain + "/user"}}
+    static var contact: String {get {return domain + "/contact"}}
+    static var greeting: String {get {return domain + "/greeting"}}
+    static var interaction: String {get {return domain + "/interaction"}}
+}
+
+struct AppColor {
+    static let yellow = UIColor(patternImage: #imageLiteral(resourceName: "yellow"))
+    static let blue = UIColor(patternImage: #imageLiteral(resourceName: "blue"))
+    static let lightBlue = UIColor(patternImage: #imageLiteral(resourceName: "light_blue"))
+}
+
 struct PreferenceKey{
     static let preferences = "preferences"
     static let keepConnected = "keepConnected"

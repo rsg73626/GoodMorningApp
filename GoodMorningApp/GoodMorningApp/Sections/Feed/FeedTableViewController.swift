@@ -9,24 +9,20 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-
+    
+    //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.setUpTabBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -39,51 +35,85 @@ class FeedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "greeting", for: indexPath) as! GreetingTableViewCell
-
-        // Configure the cell...
-
+        self.setUpCell(cell)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 344
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    //MARK: SetUp functions
+    private func setUpTabBar() {
+        self.tabBarController?.tabBar.tintColor = AppColor.blue
+        if let feed = self.tabBarController?.tabBar.items?[0] {
+            feed.image = TabBarIconImages.feed
+            feed.selectedImage = TabBarIconImages.feedSelected
+        }
+        if let today = self.tabBarController?.tabBar.items?[1] {
+            today.image = TabBarIconImages.today
+            today.selectedImage = TabBarIconImages.todaySelected
+        }
+        if let adjusts = self.tabBarController?.tabBar.items?[2] {
+            adjusts.image = TabBarIconImages.adjusts
+            adjusts.selectedImage = TabBarIconImages.adjustsSelected
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    private func setUpCell(_ cell: GreetingTableViewCell) {
+        cell.background.layer.masksToBounds = false
+        cell.background.layer.shadowColor = UIColor.black.cgColor
+        cell.background.layer.shadowOpacity = 0.5
+        cell.background.layer.shadowOffset = CGSize(width: -1, height: 1)
+        cell.background.layer.shadowRadius = 1
+        
+        cell.background.layer.shadowPath = UIBezierPath(rect: cell.background.bounds).cgPath
+        cell.background.layer.shouldRasterize = true
+        cell.background.layer.rasterizationScale = UIScreen.main.scale
+        
+        cell.background.layer.cornerRadius = 20
+        cell.background.layer.masksToBounds = false
+        cell.background.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.background.layer.shadowOpacity = 0.5
+        cell.background.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.background.layer.shadowRadius = 20
+        
+        cell.background.layer.shadowPath = UIBezierPath(rect: cell.background.bounds).cgPath
+        cell.background.layer.shouldRasterize = true
+        cell.background.layer.rasterizationScale = 1
+        
+        cell.header.backgroundColor = AppColor.lightBlue
+        let headerShape = CAShapeLayer()
+        headerShape.bounds = cell.header.frame
+        headerShape.position = cell.header.center
+        headerShape.path = UIBezierPath(roundedRect: cell.header.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 20, height: 0)).cgPath
+        cell.header.layer.mask = headerShape
+        
+        cell.footer.backgroundColor = AppColor.lightBlue
+        let footerShape = CAShapeLayer()
+        footerShape.bounds = cell.footer.frame
+        footerShape.position = cell.footer.center
+        footerShape.path = UIBezierPath(roundedRect: cell.footer.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 20, height: 0)).cgPath
+        cell.footer.layer.mask = footerShape
+        
+        self.setUpMessage(cell.message!)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    private func setUpMessage(_ message: UITextView) {
+//        let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
+//        message.layer.borderWidth = 0.3
+//        message.layer.borderColor = UIColor.lightGray.cgColor
+//        message.layer.cornerRadius = 5
+        message.textContainerInset.left = 16
+        message.textContainerInset.right = 16
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    //MARK: Actions
+    @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "filter", sender: self)
     }
-    */
-
+    
+    
     /*
     // MARK: - Navigation
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var userName: UITextField!
@@ -23,13 +23,9 @@ class EditProfileViewController: UIViewController {
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = self.user {
-            self.userName.text = user.name!
-//            self.userPhoto
-            self.userEmail.text = user.email!
-            self.userAbout.text = user.about!
-            self.userContact.text = user.contacts.first?.content ?? "Adicione um contato"
-        }
+        self.userPhoto.isUserInteractionEnabled = true
+        self.setUpUser()
+        self.setUpAbout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +33,77 @@ class EditProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Actions
-    @IBAction func userPhotoTapped(_ sender: UITapGestureRecognizer) {
+    //MARK: ImagePicker functions
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let imagemSelecionada = info[UIImagePickerControllerOriginalImage] as? UIImage else{
+            fatalError("Erro ao selecionar imagem: \(info)")
+        }
+        self.userPhoto.image = imagemSelecionada
+        self.dismiss(animated: true, completion: nil)
     }
     
-
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //MARK: Actions
+    @IBAction func userPhotoTapped(_ sender: UITapGestureRecognizer) {
+        if self.userName.isFirstResponder { self.userName.resignFirstResponder() }
+        if self.userEmail.isFirstResponder { self.userEmail.resignFirstResponder() }
+        if self.userAbout.isFirstResponder { self.userAbout.resignFirstResponder() }
+        if self.userContact.isFirstResponder { self.userContact.resignFirstResponder() }
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        let alert = UIAlertController(title: "Foto", message: "Escolha uma foto para o seu perfil.", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Tirar uma foto", style: .default, handler: {_ in
+            imagePickerController.sourceType = .camera
+            self.present(imagePickerController, animated: true, completion: nil)
+        })
+        let galeryAction = UIAlertAction(title: "Escolher da galeria", style: .default, handler : {_ in
+            imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cameraAction)
+        alert.addAction(galeryAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: SetUp functions
+    private func setUpUser() {
+        if let user = self.user {
+            userName.text = user.name!
+            userEmail.text = user.email!
+            userAbout.text = user.about!
+            if let contact = self.user?.contacts?.first{
+                self.userContact.text = contact.content
+            }else{
+                self.userContact.text = "Insira um contato."
+            }
+        }
+    }
+    
+    private func setUpAbout() {
+        let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
+        self.userAbout.layer.borderWidth = 0.3
+        self.userAbout.layer.borderColor = UIColor.lightGray.cgColor
+        self.userAbout.layer.cornerRadius = 5
+        self.userAbout.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
+    
     /*
     // MARK: - Navigation
 

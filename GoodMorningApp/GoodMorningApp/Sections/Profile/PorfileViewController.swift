@@ -23,12 +23,8 @@ class PorfileViewController: UIViewController {
     //MARK: Life sicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = self.user {
-            userName.text = user.name!
-            userEmail.text = user.email!
-            userAbout.text = user.about!
-            userContact.text = user.contacts.first?.content ?? "Adcione um contato."
-        }
+        self.setUpUser()
+        self.setUpAbout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +32,27 @@ class PorfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: SetUp functions
+    private func setUpUser() {
+        if let user = self.user {
+            userName.text = user.name!
+            userEmail.text = user.email!
+            userAbout.text = user.about!
+            if let contact = self.user?.contacts?.first{
+                self.userContact.text = contact.content
+            }else{
+                self.userContact.text = "Insira um contato."
+            }
+        }
+    }
+    
+    private func setUpAbout() {
+        let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
+        self.userAbout.layer.borderWidth = 0.3
+        self.userAbout.layer.borderColor = UIColor.lightGray.cgColor
+        self.userAbout.layer.cornerRadius = 5
+        self.userAbout.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
 
     /*
     // MARK: - Navigation

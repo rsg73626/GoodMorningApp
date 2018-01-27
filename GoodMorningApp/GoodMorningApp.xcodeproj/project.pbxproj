@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452F67142017ECF000F92AE1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F67132017ECF000F92AE1 /* CustomTextField.swift */; };
+		453F3F3C201962FD00F2843F /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F3F3B201962FD00F2843F /* CustomLabel.swift */; };
+		453F3F3E201ABEDC00F2843F /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F3F3D201ABEDC00F2843F /* DataManagerTests.swift */; };
 		4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191B2003B8F9001F252F /* LoginViewController.swift */; };
 		4540191E2003B909001F252F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191D2003B909001F252F /* RegisterViewController.swift */; };
 		454019202003B91E001F252F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191F2003B91E001F252F /* AboutViewController.swift */; };
@@ -21,7 +24,6 @@
 		45401939200411A5001F252F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45401938200411A5001F252F /* Contact.swift */; };
 		4540193B200411BB001F252F /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193A200411BB001F252F /* Greeting.swift */; };
 		4540193E20041882001F252F /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193D20041882001F252F /* Interaction.swift */; };
-		4540194020041A28001F252F /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540193F20041A28001F252F /* DataManagerProtocol.swift */; };
 		4540194220041E8A001F252F /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540194120041E8A001F252F /* UserDataManager.swift */; };
 		45401944200425F1001F252F /* ContactDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45401943200425F1001F252F /* ContactDataManager.swift */; };
 		4540194620042629001F252F /* GreetingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540194520042629001F252F /* GreetingDataManager.swift */; };
@@ -32,9 +34,10 @@
 		454019532006A073001F252F /* CodableModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019522006A073001F252F /* CodableModelTests.swift */; };
 		454019552006F058001F252F /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019542006F058001F252F /* LocalNotificationManager.swift */; };
 		454019572006F064001F252F /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019562006F064001F252F /* PushNotificationManager.swift */; };
-		454019592006FAB1001F252F /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454019582006FAB1001F252F /* FilterTableViewController.swift */; };
 		455655092009BA650055A4B4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455655082009BA650055A4B4 /* EditProfileViewController.swift */; };
 		4556550B2009CA800055A4B4 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556550A2009CA800055A4B4 /* ActivityIndicatorManager.swift */; };
+		456411AB20143C8600B8E891 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456411AA20143C8600B8E891 /* FilterViewController.swift */; };
+		456411AE2016D6CC00B8E891 /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456411AD2016D6CC00B8E891 /* CodableTests.swift */; };
 		456A94B71FFDE23E00B6CA39 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94B61FFDE23E00B6CA39 /* Feed.storyboard */; };
 		456A94B91FFDE4CC00B6CA39 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94B81FFDE4CC00B6CA39 /* Today.storyboard */; };
 		456A94BB1FFDE54C00B6CA39 /* Adjusts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */; };
@@ -42,10 +45,10 @@
 		45AF01A01FFC65D300BFCA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */; };
 		45AF01A51FFC65D300BFCA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01A31FFC65D300BFCA08 /* Main.storyboard */; };
 		45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01A61FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld */; };
-		45AF01AA1FFC65D300BFCA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01A91FFC65D300BFCA08 /* Assets.xcassets */; };
 		45AF01AD1FFC65D300BFCA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01AB1FFC65D300BFCA08 /* LaunchScreen.storyboard */; };
 		45AF01B81FFC65D300BFCA08 /* GoodMorningAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01B71FFC65D300BFCA08 /* GoodMorningAppTests.swift */; };
 		45AF01C31FFC65D300BFCA08 /* GoodMorningAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */; };
+		45C3B3F7200FE2560036525C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C3B3F6200FE2560036525C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452F67132017ECF000F92AE1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		453F3F3B201962FD00F2843F /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		453F3F3D201ABEDC00F2843F /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		4540191B2003B8F9001F252F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4540191D2003B909001F252F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4540191F2003B91E001F252F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +86,6 @@
 		45401938200411A5001F252F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		4540193A200411BB001F252F /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeting.swift; sourceTree = "<group>"; };
 		4540193D20041882001F252F /* Interaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interaction.swift; sourceTree = "<group>"; };
-		4540193F20041A28001F252F /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
 		4540194120041E8A001F252F /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		45401943200425F1001F252F /* ContactDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataManager.swift; sourceTree = "<group>"; };
 		4540194520042629001F252F /* GreetingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingDataManager.swift; sourceTree = "<group>"; };
@@ -91,9 +96,10 @@
 		454019522006A073001F252F /* CodableModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModelTests.swift; sourceTree = "<group>"; };
 		454019542006F058001F252F /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		454019562006F064001F252F /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
-		454019582006FAB1001F252F /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		455655082009BA650055A4B4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4556550A2009CA800055A4B4 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		456411AA20143C8600B8E891 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		456411AD2016D6CC00B8E891 /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
 		456A94B61FFDE23E00B6CA39 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		456A94B81FFDE4CC00B6CA39 /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
 		456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adjusts.storyboard; sourceTree = "<group>"; };
@@ -102,7 +108,6 @@
 		45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45AF01A41FFC65D300BFCA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45AF01A71FFC65D300BFCA08 /* GoodMorningApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodMorningApp.xcdatamodel; sourceTree = "<group>"; };
-		45AF01A91FFC65D300BFCA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45AF01AC1FFC65D300BFCA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45AF01AE1FFC65D300BFCA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45AF01B31FFC65D300BFCA08 /* GoodMorningAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodMorningAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +116,7 @@
 		45AF01BE1FFC65D300BFCA08 /* GoodMorningAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodMorningAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMorningAppUITests.swift; sourceTree = "<group>"; };
 		45AF01C41FFC65D300BFCA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C3B3F6200FE2560036525C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452F67122017ECAC00F92AE1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				452F67132017ECF000F92AE1 /* CustomTextField.swift */,
+				453F3F3B201962FD00F2843F /* CustomLabel.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		4540191620039F33001F252F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +172,7 @@
 				454019232003BACB001F252F /* FeedTableViewController.swift */,
 				454019252003BADD001F252F /* GreetingViewController.swift */,
 				454019292003BB36001F252F /* GreetingTableViewCell.swift */,
-				454019582006FAB1001F252F /* FilterTableViewController.swift */,
+				456411AA20143C8600B8E891 /* FilterViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -217,7 +232,6 @@
 		4540193520041185001F252F /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
-				4540193F20041A28001F252F /* DataManagerProtocol.swift */,
 				4540194120041E8A001F252F /* UserDataManager.swift */,
 				45401943200425F1001F252F /* ContactDataManager.swift */,
 				4540194520042629001F252F /* GreetingDataManager.swift */,
@@ -246,6 +260,15 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		456411AC2016D68C00B8E891 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				456411AD2016D6CC00B8E891 /* CodableTests.swift */,
+				453F3F3D201ABEDC00F2843F /* DataManagerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		45AF01931FFC65D300BFCA08 = {
 			isa = PBXGroup;
 			children = (
@@ -269,14 +292,16 @@
 		45AF019E1FFC65D300BFCA08 /* GoodMorningApp */ = {
 			isa = PBXGroup;
 			children = (
+				452F67122017ECAC00F92AE1 /* Custom */,
+				456411AC2016D68C00B8E891 /* Tests */,
 				4540194B20042E7B001F252F /* Notifications */,
 				4540193C200411D0001F252F /* Utils */,
 				4540193520041185001F252F /* DataManagers */,
 				454019342004117E001F252F /* Models */,
 				454019332004114E001F252F /* Sections */,
 				45AF019F1FFC65D300BFCA08 /* AppDelegate.swift */,
-				45AF01A91FFC65D300BFCA08 /* Assets.xcassets */,
 				45AF01AB1FFC65D300BFCA08 /* LaunchScreen.storyboard */,
+				45C3B3F6200FE2560036525C /* Assets.xcassets */,
 				45AF01AE1FFC65D300BFCA08 /* Info.plist */,
 				45AF01A61FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld */,
 			);
@@ -409,10 +434,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45AF01AD1FFC65D300BFCA08 /* LaunchScreen.storyboard in Resources */,
-				45AF01AA1FFC65D300BFCA08 /* Assets.xcassets in Resources */,
 				456A94BD1FFDE58500B6CA39 /* Profile.storyboard in Resources */,
 				45AF01A51FFC65D300BFCA08 /* Main.storyboard in Resources */,
 				456A94B71FFDE23E00B6CA39 /* Feed.storyboard in Resources */,
+				45C3B3F7200FE2560036525C /* Assets.xcassets in Resources */,
 				456A94B91FFDE4CC00B6CA39 /* Today.storyboard in Resources */,
 				456A94BB1FFDE54C00B6CA39 /* Adjusts.storyboard in Resources */,
 			);
@@ -441,8 +466,8 @@
 			files = (
 				455655092009BA650055A4B4 /* EditProfileViewController.swift in Sources */,
 				4540194A2004287F001F252F /* PreferenceManager.swift in Sources */,
+				453F3F3C201962FD00F2843F /* CustomLabel.swift in Sources */,
 				4540194620042629001F252F /* GreetingDataManager.swift in Sources */,
-				4540194020041A28001F252F /* DataManagerProtocol.swift in Sources */,
 				454019202003B91E001F252F /* AboutViewController.swift in Sources */,
 				4540195120059C08001F252F /* Parser.swift in Sources */,
 				4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */,
@@ -458,16 +483,19 @@
 				454019532006A073001F252F /* CodableModelTests.swift in Sources */,
 				454019572006F064001F252F /* PushNotificationManager.swift in Sources */,
 				45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */,
+				456411AE2016D6CC00B8E891 /* CodableTests.swift in Sources */,
+				452F67142017ECF000F92AE1 /* CustomTextField.swift in Sources */,
 				45401948200426AC001F252F /* InteractionDataManager.swift in Sources */,
 				454019222003B988001F252F /* TabBarController.swift in Sources */,
 				4540194220041E8A001F252F /* UserDataManager.swift in Sources */,
 				454019372004119C001F252F /* User.swift in Sources */,
 				4540192A2003BB36001F252F /* GreetingTableViewCell.swift in Sources */,
+				456411AB20143C8600B8E891 /* FilterViewController.swift in Sources */,
 				4556550B2009CA800055A4B4 /* ActivityIndicatorManager.swift in Sources */,
 				454019302003BBC2001F252F /* AdjustsTableViewController.swift in Sources */,
 				454019262003BADD001F252F /* GreetingViewController.swift in Sources */,
 				454019322003BBE6001F252F /* PorfileViewController.swift in Sources */,
-				454019592006FAB1001F252F /* FilterTableViewController.swift in Sources */,
+				453F3F3E201ABEDC00F2843F /* DataManagerTests.swift in Sources */,
 				45AF01A01FFC65D300BFCA08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

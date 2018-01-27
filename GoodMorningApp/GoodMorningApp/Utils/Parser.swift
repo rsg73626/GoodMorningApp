@@ -43,6 +43,27 @@ class Parser{
         return self.dateFormatter.date(from: string)
     }
     
+    func jsonStringToDictionary(_ jsonString: String) -> [String:Any]? {
+        if let data = jsonString.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    func dictionaryToJSONString(_ dictionary: [String:Any]) -> String? {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: [])
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            return jsonString
+        } catch {
+            return nil
+        }
+    }
+    
     
     
 }
