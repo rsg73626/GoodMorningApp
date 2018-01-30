@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		452F67142017ECF000F92AE1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F67132017ECF000F92AE1 /* CustomTextField.swift */; };
+		45337EC620202E420053BB0E /* GreetingPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45337EC520202E420053BB0E /* GreetingPreference.swift */; };
+		45337EC8202031BB0053BB0E /* GreetingPreferenceDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45337EC7202031BB0053BB0E /* GreetingPreferenceDataManager.swift */; };
 		453F3F3C201962FD00F2843F /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F3F3B201962FD00F2843F /* CustomLabel.swift */; };
 		453F3F3E201ABEDC00F2843F /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F3F3D201ABEDC00F2843F /* DataManagerTests.swift */; };
 		4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540191B2003B8F9001F252F /* LoginViewController.swift */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		452F67132017ECF000F92AE1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		45337EC520202E420053BB0E /* GreetingPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPreference.swift; sourceTree = "<group>"; };
+		45337EC7202031BB0053BB0E /* GreetingPreferenceDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPreferenceDataManager.swift; sourceTree = "<group>"; };
 		453F3F3B201962FD00F2843F /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		453F3F3D201ABEDC00F2843F /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		4540191B2003B8F9001F252F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				4540193A200411BB001F252F /* Greeting.swift */,
 				4540193D20041882001F252F /* Interaction.swift */,
 				454019522006A073001F252F /* CodableModelTests.swift */,
+				45337EC520202E420053BB0E /* GreetingPreference.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				45401943200425F1001F252F /* ContactDataManager.swift */,
 				4540194520042629001F252F /* GreetingDataManager.swift */,
 				45401947200426AB001F252F /* InteractionDataManager.swift */,
+				45337EC7202031BB0053BB0E /* GreetingPreferenceDataManager.swift */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */,
 				456411AE2016D6CC00B8E891 /* CodableTests.swift in Sources */,
 				452F67142017ECF000F92AE1 /* CustomTextField.swift in Sources */,
+				45337EC620202E420053BB0E /* GreetingPreference.swift in Sources */,
 				45401948200426AC001F252F /* InteractionDataManager.swift in Sources */,
 				454019222003B988001F252F /* TabBarController.swift in Sources */,
 				4540194220041E8A001F252F /* UserDataManager.swift in Sources */,
@@ -495,6 +502,7 @@
 				454019302003BBC2001F252F /* AdjustsTableViewController.swift in Sources */,
 				454019262003BADD001F252F /* GreetingViewController.swift in Sources */,
 				454019322003BBE6001F252F /* PorfileViewController.swift in Sources */,
+				45337EC8202031BB0053BB0E /* GreetingPreferenceDataManager.swift in Sources */,
 				453F3F3E201ABEDC00F2843F /* DataManagerTests.swift in Sources */,
 				45AF01A01FFC65D300BFCA08 /* AppDelegate.swift in Sources */,
 			);

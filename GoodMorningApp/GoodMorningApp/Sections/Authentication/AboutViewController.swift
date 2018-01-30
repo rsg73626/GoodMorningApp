@@ -25,6 +25,7 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpNavigationBar()
         self.profile.isUserInteractionEnabled = true
         self.setUpAbout()
         self.setUpContact()
@@ -48,6 +49,10 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     }
     
     //MARK: SetUp functions
+    private func setUpNavigationBar() {
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
+    }
+    
     private func setUpAbout() {
         let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
         self.about.textColor = lightGray

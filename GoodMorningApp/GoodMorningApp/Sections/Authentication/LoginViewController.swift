@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        CodableTests.run()
-        DataManagerTests.run()
+//        DataManagerTests.run()
         self.setUpNavigationBar()
         self.setUpButtons()
         self.updateButtonsState()
@@ -70,12 +70,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private func setUpNavigationBar() {
         let textAttributes = [NSAttributedStringKey.foregroundColor:AppColor.yellow]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.barTintColor = AppColor.yellow
         self.navigationController?.navigationBar.backgroundColor = AppColor.yellow
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = false
     }
-    
     private func setUpButtons(){
         self.login.backgroundColor = AppColor.blue
         self.login.tintColor = UIColor.white

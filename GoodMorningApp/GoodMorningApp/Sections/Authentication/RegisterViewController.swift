@@ -27,7 +27,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpButton()
+        self.setUpNavigationBar()
+        self.setUpButtons()
         self.updateButtonsState()
         NotificationCenter.default.addObserver(
             self,
@@ -52,7 +53,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: SetUp functions
-    private func setUpButton() {
+    private func setUpNavigationBar() {
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.tintColor = UIColor(patternImage: UIImage(named: "blue")!)
+    }
+    
+    private func setUpButtons() {
         self.done.backgroundColor = AppColor.blue
         self.done.tintColor = UIColor.white
         self.done.layer.cornerRadius = 5

@@ -294,7 +294,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALc-FH-K75">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="586"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-mb-Zfr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-mb-Zfr">
                                         <rect key="frame" x="32" y="8" width="256" height="256"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -462,10 +462,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="83Z-Bg-jlj">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98094910383224487" green="0.81636041402816772" blue="0.35905760526657104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.97249168157577515" green="0.83566975593566895" blue="0.44761067628860474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -481,7 +477,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="3224" height="3116"/>
+        <image name="default_photo" width="256" height="256"/>
         <image name="smile" width="3224" height="3116"/>
     </resources>
     <inferredMetricsTieBreakers>
