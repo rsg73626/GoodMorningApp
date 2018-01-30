@@ -14,6 +14,7 @@ public class CodableTests {
         print("\n*** Codable tests ***")
         testUserCodable()
         testContactCodable()
+        testGreetingPreferenceCodable()
         testGreetingCodable()
         testInteractionCodable()
     }
@@ -56,6 +57,28 @@ public class CodableTests {
         let decodedContacts = try? decoder.decode([Contact].self, from: contactsData!)
         print("\n*** Decoded Contacts ***")
         print(decodedContacts!)
+    }
+    
+    private static func testGreetingPreferenceCodable() {
+        let encoder: JSONEncoder = JSONEncoder()
+        let decoder: JSONDecoder = JSONDecoder()
+        
+        let gp = GreetingPreference(type: .GoodMorning, isActive: true, from: Date())
+        let gp2 = GreetingPreference(type: .GoodAfternoon, isActive: false, from: Date())
+        let gp3 = GreetingPreference(type: .GoodEvening, isActive: true, from: Date())
+        let gp4 = GreetingPreference(type: .GoodDawn, isActive: false, from: Date())
+        let gps = [gp, gp2, gp3, gp4]
+        print("\n*** Created Greeting Preferences ***")
+        print(gps)
+        
+        let gpsData = try? encoder.encode(gps)
+        let gpsString = String(data: gpsData!, encoding: .utf8)
+        print("\n*** Encoded Greeting Preferences ***")
+        print(gpsString!)
+        
+        let decodedGps = try? decoder.decode([GreetingPreference].self, from: gpsData!)
+        print("\n*** Decoded Greeting Preferences ***")
+        print(decodedGps!)
     }
     
     private static func testGreetingCodable() {

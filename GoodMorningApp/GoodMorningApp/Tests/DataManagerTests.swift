@@ -119,6 +119,14 @@ class DataManagerTests {
         
     }
     
+    private static func testGreetingPreferenceDataManager() {
+        //read by id
+        
+        //read by user
+        
+        //update
+    }
+    
     private static func testGreetingDataManager() {
         //read
         
