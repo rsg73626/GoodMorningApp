@@ -64,6 +64,7 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KaD-4E-4dr">
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="switchChanged:" destination="Gow-Tz-4xQ" eventType="valueChanged" id="y1a-lM-dYA"/>
                                                             </connections>
@@ -171,6 +172,7 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YhI-IU-fXo">
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="switchChanged:" destination="Gow-Tz-4xQ" eventType="valueChanged" id="kL1-Rj-b6l"/>
                                                             </connections>
@@ -271,6 +273,7 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QqZ-8I-Jag">
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="switchChanged:" destination="Gow-Tz-4xQ" eventType="valueChanged" id="BeY-da-QuL"/>
                                                             </connections>
@@ -371,6 +374,7 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feg-ro-zqz">
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="switchChanged:" destination="Gow-Tz-4xQ" eventType="valueChanged" id="eh2-kE-kDC"/>
                                                             </connections>
@@ -478,7 +482,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-Pk-DCz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="BUM-Pk-DCz">
                                                     <rect key="frame" x="16" y="16" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="B4K-39-Yxv"/>
@@ -517,7 +521,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="WVj-5z-Wbq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="WVj-5z-Wbq">
                                                     <rect key="frame" x="16" y="16" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="G7T-Bq-7oc"/>
@@ -584,6 +588,7 @@
                         <outlet property="eveningInfo" destination="O56-2C-yrQ" id="wh4-f5-m31"/>
                         <outlet property="eveningInterval" destination="8Ua-cR-9km" id="Hft-4h-q2j"/>
                         <outlet property="eveningTitle" destination="36I-uS-GU7" id="WZH-DL-eaU"/>
+                        <outlet property="luizPhoto" destination="WVj-5z-Wbq" id="j5D-ES-Eg5"/>
                         <outlet property="morning" destination="KaD-4E-4dr" id="xDU-RQ-V01"/>
                         <outlet property="morningFrom" destination="cFh-oI-gwL" id="Qjd-0t-mIg"/>
                         <outlet property="morningHeader" destination="2yZ-vL-NXI" id="ujq-YV-Ink"/>
@@ -592,6 +597,7 @@
                         <outlet property="morningTitle" destination="Jcj-Av-Tyi" id="Rqn-MH-YFU"/>
                         <outlet property="notificationRadius" destination="5LW-Le-rKM" id="Huc-ya-mDc"/>
                         <outlet property="radius" destination="JEy-J1-wFI" id="4yi-5E-RMO"/>
+                        <outlet property="renanPhoto" destination="BUM-Pk-DCz" id="VTK-AU-iHT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYo-dO-GEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,6 +633,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="3224" height="3116"/>
+        <image name="default_photo" width="256" height="256"/>
     </resources>
 </document>

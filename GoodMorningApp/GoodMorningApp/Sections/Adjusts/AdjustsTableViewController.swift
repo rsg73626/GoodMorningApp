@@ -42,17 +42,22 @@ class AdjustsTableViewController: UITableViewController {
     @IBOutlet weak var notificationRadius: UISlider!
     @IBOutlet weak var radius: UILabel!
     
+    @IBOutlet weak var renanPhoto: UIImageView!
+    @IBOutlet weak var luizPhoto: UIImageView!
+    
     //MARK: Properties
     let preferences: PreferenceManager = PreferenceManager.shared
     
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpNavigationBar()
         self.setUpGoodMorning()
         self.setUpGoodAfternoon()
         self.setUpGoodEvening()
         self.setUpGoodDawn()
         self.setUpNotificationRadius()
+        self.setUpDevelopers()
     }
     
     //MARK: UITableView functions
@@ -75,8 +80,15 @@ class AdjustsTableViewController: UITableViewController {
     }
     
     //MARK: Set up functions
+    private func setUpNavigationBar() {
+        self.navigationController?.navigationBar.barTintColor = AppColor.yellow
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     private func setUpGoodMorning() {
         self.morningHeader.backgroundColor = AppColor.lightBlue
+        self.morning.onTintColor = AppColor.blue
         self.morning.isOn = self.preferences.isGoodMorningActive
         self.morningFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.morningFrom.setDate(self.preferences.goodMorningInterval.from, animated: false)
@@ -86,6 +98,7 @@ class AdjustsTableViewController: UITableViewController {
     
     private func setUpGoodAfternoon(){
         self.afeternoonHeader.backgroundColor = AppColor.lightBlue
+        self.afternoon.onTintColor = AppColor.blue
         self.afternoon.isOn = self.preferences.isGoodAfternoonActive
         self.afternoonFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.afternoonFrom.setDate(self.preferences.goodAfternoonInterval.from, animated: false)
@@ -94,6 +107,7 @@ class AdjustsTableViewController: UITableViewController {
     
     private func setUpGoodEvening(){
         self.eveningHeader.backgroundColor = AppColor.lightBlue
+        self.evening.onTintColor = AppColor.blue
         self.evening.isOn = self.preferences.isGoodEveningActive
         self.eveningFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.eveningFrom.setDate(self.preferences.goodEveningInterval.from, animated: false)
@@ -102,6 +116,7 @@ class AdjustsTableViewController: UITableViewController {
     
     private func setUpGoodDawn(){
         self.dawnHeader.backgroundColor = AppColor.lightBlue
+        self.dawn.onTintColor = AppColor.blue
         self.dawn.isOn = self.preferences.isGoodDawnActive
         self.dawnFrom.timeZone = TimeZone.init(secondsFromGMT: 0)
         self.dawnFrom.setDate(self.preferences.goodDawnInterval.from, animated: false)
@@ -111,6 +126,10 @@ class AdjustsTableViewController: UITableViewController {
     private func setUpNotificationRadius() {
         self.notificationRadius.setValue(Float(self.preferences.radius), animated: false)
         self.updateRadiusLabel(to: self.preferences.radius)
+    }
+    
+    private func setUpDevelopers() {
+        [renanPhoto, luizPhoto].forEach {photo in photo?.layer.cornerRadius = (photo?.frame.size.width)!/2; photo?.clipsToBounds = true}
     }
     
     //MARK: Update functions
@@ -160,6 +179,7 @@ class AdjustsTableViewController: UITableViewController {
     }
     
     private func updateRadiusLabel(to value: Int){
+        self.notificationRadius.minimumTrackTintColor = AppColor.blue
         self.radius.text = "\(value) km"
     }
     
