@@ -31,6 +31,7 @@ class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpHeaders()
+        self.setUpSwitches()
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,9 +91,16 @@ class FilterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     //MARK: SetUp functions
     private func setUpHeaders() {
-        self.typeHeader.backgroundColor = AppColor.blue
-        self.actionHeader.backgroundColor = AppColor.blue
-        self.timeHeader.backgroundColor = AppColor.blue
+        self.typeHeader.backgroundColor = AppColor.lightBlue
+        self.actionHeader.backgroundColor = AppColor.lightBlue
+        self.timeHeader.backgroundColor = AppColor.lightBlue
+    }
+    
+    private func setUpSwitches() {
+        self.morning.onTintColor = AppColor.blue
+        self.afternoon.onTintColor = AppColor.blue
+        self.evening.onTintColor = AppColor.blue
+        self.dawn.onTintColor = AppColor.blue
     }
     
     /*

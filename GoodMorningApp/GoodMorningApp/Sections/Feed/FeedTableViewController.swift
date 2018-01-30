@@ -10,9 +10,26 @@ import UIKit
 
 class FeedTableViewController: UITableViewController {
     
+    //MARK: Properties
+    private var interactions: [Interaction]!
+    var selectedInteraction: Interaction?
+    
+    //MARK: Outlets
+    @IBOutlet weak var filter: UIBarButtonItem!
+    
+    
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.interactions = [Interaction]()
+        let user = User(name: "Renan Soares Germano", email: "renan.rsg@hotmail.com", password: "", photo: "userphoto", about: "20 anos, estudante de ciência da computação. Desenvolvedore iOS.", contacts: [Contact(content: "11 91234 5678", type: .Cellphone)])
+        for i in 1...5 {
+            let greeting = Greeting(type: .GoodMorning, message: "Muito bom dia pra você que leu! Que tudo de bom te aconteça hoje! \(i)", date: Date(), creator: user)
+            self.interactions.append(Interaction(greeting: greeting, isRetributed: false, isLikedBySender: false, isLikedByReceiver: false))
+        }
+            
+        self.setUpNavigationBar()
         self.setUpTabBar()
     }
 
@@ -22,7 +39,7 @@ class FeedTableViewController: UITableViewController {
     }
     
     
-    // MARK: - Table view data source
+    // MARK: - Table view functions
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -30,12 +47,19 @@ class FeedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return self.interactions?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "greeting", for: indexPath) as! GreetingTableViewCell
-        self.setUpCell(cell)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "greeting", for: indexPath) as? GreetingTableViewCell else {
+            fatalError("Imporssible to conver UITableViewCell to GreetingTableViewCell.")
+            
+        }
+        let index = indexPath.row
+        cell.message.restorationIdentifier = "\(index)"
+        self.setUpCellLayout(cell)
+        self.setUpCell(cell: cell, interaction: self.interactions[index])
+        
         return cell
     }
     
@@ -43,10 +67,20 @@ class FeedTableViewController: UITableViewController {
         return 344
     }
     
-    
     //MARK: SetUp functions
+    private func setUpNavigationBar() {
+        if self.navigationItem.rightBarButtonItem == self.filter {
+            self.filter.isEnabled = false
+            self.navigationItem.rightBarButtonItem = nil
+        }
+        self.navigationController?.navigationBar.barTintColor = AppColor.yellow
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     private func setUpTabBar() {
         self.tabBarController?.tabBar.tintColor = AppColor.blue
+//        self.tabBarController?.tabBar.unselectedItemTintColor = AppColor.gray
         if let feed = self.tabBarController?.tabBar.items?[0] {
             feed.image = TabBarIconImages.feed
             feed.selectedImage = TabBarIconImages.feedSelected
@@ -59,8 +93,13 @@ class FeedTableViewController: UITableViewController {
             adjusts.image = TabBarIconImages.adjusts
             adjusts.selectedImage = TabBarIconImages.adjustsSelected
         }
+        if let profile = self.tabBarController?.tabBar.items?[3] {
+            profile.image = TabBarIconImages.profile
+            profile.selectedImage = TabBarIconImages.profileSelected
+        }
     }
-    private func setUpCell(_ cell: GreetingTableViewCell) {
+    
+    private func setUpCellLayout(_ cell: GreetingTableViewCell) {
         cell.background.layer.masksToBounds = false
         cell.background.layer.shadowColor = UIColor.black.cgColor
         cell.background.layer.shadowOpacity = 0.5
@@ -89,6 +128,9 @@ class FeedTableViewController: UITableViewController {
         headerShape.path = UIBezierPath(roundedRect: cell.header.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 20, height: 0)).cgPath
         cell.header.layer.mask = headerShape
         
+        cell.userPhoto.layer.cornerRadius = cell.userPhoto.frame.size.width/2
+        cell.userPhoto.clipsToBounds = true
+        
         cell.footer.backgroundColor = AppColor.lightBlue
         let footerShape = CAShapeLayer()
         footerShape.bounds = cell.footer.frame
@@ -100,28 +142,49 @@ class FeedTableViewController: UITableViewController {
     }
     
     private func setUpMessage(_ message: UITextView) {
-//        let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
-//        message.layer.borderWidth = 0.3
-//        message.layer.borderColor = UIColor.lightGray.cgColor
-//        message.layer.cornerRadius = 5
-        message.textContainerInset.left = 16
-        message.textContainerInset.right = 16
+        message.textContainerInset.left = 13
+        message.textContainerInset.right = 13
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.messageTapped))
+        message.gestureRecognizers?.append(tapGesture)
     }
     
+    private func setUpCell(cell: GreetingTableViewCell, interaction: Interaction) {
+        cell.userName.text = interaction.greeting.creator?.name
+        cell.title.text = interaction.greeting.type.string
+        cell.message.text = interaction.greeting.message
+        cell.action.titleLabel?.text = !interaction.isRetributed ? ActionKey.retribute : !interaction.isLikedByReceiver ? ActionKey.like : ActionKey.liked
+    }
     //MARK: Actions
     @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "filter", sender: self)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Aux funcs
+    @objc private func messageTapped(_ sender: UITapGestureRecognizer) {
+        if let message = sender.view {
+            self.performSegue(withIdentifier: "interactionDetail", sender: message)
+        }
     }
-    */
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell {
+            guard let index = self.tableView.indexPath(for: cell)?.last else {
+                print("Errow while trying to find row index in table view cells.")
+                return
+            }
+            self.selectedInteraction = self.interactions?[index]
+        } else if let text = sender as? UITextView {
+            guard let indexString = text.restorationIdentifier, let index = Int(indexString) else {
+                print("Errow while trying to find row index in text view restoration identifies.")
+                return
+            }
+            self.selectedInteraction = self.interactions?[index]
+        }
+        if let greetingViewController = segue.destination as? GreetingViewController {
+            greetingViewController.interaction = self.selectedInteraction
+        }
+    }
+ 
 
 }

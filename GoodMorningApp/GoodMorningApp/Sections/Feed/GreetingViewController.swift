@@ -46,6 +46,8 @@ class GreetingViewController: UIViewController {
         let type = self.interaction?.greeting.type.rawValue ?? 1
         self.greetingTitle.text = self.greetings[type-1]
         self.sentByHeader.backgroundColor = AppColor.lightBlue
+        self.userPhoto.layer.cornerRadius = self.userPhoto.frame.size.width/2
+        self.userPhoto.clipsToBounds = true
     }
     
     private func setUpInteracton(){
@@ -85,11 +87,13 @@ class GreetingViewController: UIViewController {
         self.message.layer.borderWidth = 0.3
         self.message.layer.borderColor = UIColor.lightGray.cgColor
         self.message.layer.cornerRadius = 5
-        self.message.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.message.textContainerInset.left = 13
+        self.message.textContainerInset.right = 13
         self.about.layer.borderWidth = 0.3
         self.about.layer.borderColor = UIColor.lightGray.cgColor
         self.about.layer.cornerRadius = 5
-        self.about.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.about.textContainerInset.left = 13
+        self.about.textContainerInset.left = 13
     }
     
     private func setUpButtons() {

@@ -299,7 +299,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ctI-U6-4uX" userLabel="user info">
                                         <rect key="frame" x="16" y="312" width="343" height="125"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="k7L-pn-Vre">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="k7L-pn-Vre">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="125" id="8Ik-dh-s6g"/>
@@ -415,7 +415,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-1t-HSE" userLabel="header">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-u7-CpC">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-u7-CpC">
                                                             <rect key="frame" x="16" y="16" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="7A2-oS-WFd"/>
@@ -453,6 +453,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Desejo que todas as coisas boas aconteçam em sua vida hoje!" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-G9-CRF">
                                                     <rect key="frame" x="0.0" y="135" width="343" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="P0Q-c1-Hjk"/>
                                                     </constraints>
@@ -463,7 +464,10 @@
                                                     <rect key="frame" x="0.0" y="279" width="343" height="50"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-DV-HpI">
-                                                            <rect key="frame" x="16" y="10" width="44" height="30"/>
+                                                            <rect key="frame" x="16" y="10" width="75" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="75" id="5AM-sL-a9a"/>
+                                                            </constraints>
                                                             <state key="normal" title="Action">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
@@ -515,7 +519,7 @@
                                     <outlet property="title" destination="uQE-dd-bB9" id="T8y-Wp-h2c"/>
                                     <outlet property="userName" destination="cKu-wn-D0p" id="vzx-yt-5JE"/>
                                     <outlet property="userPhoto" destination="Nlj-u7-CpC" id="maT-MW-zE8"/>
-                                    <segue destination="sOc-k0-uHh" kind="show" id="mxs-qK-WxJ"/>
+                                    <segue destination="sOc-k0-uHh" kind="show" identifier="interactionDetail" id="eh4-OY-rcs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -534,6 +538,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="750"/>
                     <connections>
+                        <outlet property="filter" destination="Edc-w0-uQk" id="Vvp-19-9od"/>
                         <segue destination="Zly-0A-2oF" kind="show" identifier="filter" id="Cgf-1j-h60"/>
                     </connections>
                 </tableViewController>
@@ -570,6 +575,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="3224" height="3116"/>
+        <image name="default_photo" width="256" height="256"/>
     </resources>
 </document>
