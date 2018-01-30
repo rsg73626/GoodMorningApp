@@ -30,6 +30,7 @@ class TodayTableViewController: UITableViewController {
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpNavigationBar()
         self.setUpTextViews()
         self.setUpButtons()
     }
@@ -87,27 +88,37 @@ class TodayTableViewController: UITableViewController {
     }
     
     //MARK: SetUp functions
+    private func setUpNavigationBar() {
+        self.navigationController?.navigationBar.barTintColor = AppColor.yellow
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     private func setUpTextViews() {
         let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
         self.morningMessage.layer.borderWidth = 0.3
         self.morningMessage.layer.borderColor = UIColor.lightGray.cgColor
         self.morningMessage.layer.cornerRadius = 5
-        self.morningMessage.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.morningMessage.textContainerInset.left = 13
+        self.morningMessage.textContainerInset.right = 13
         
         self.afternoonMessage.layer.borderWidth = 0.3
         self.afternoonMessage.layer.borderColor = UIColor.lightGray.cgColor
         self.afternoonMessage.layer.cornerRadius = 5
-        self.afternoonMessage.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.afternoonMessage.textContainerInset.left = 13
+        self.afternoonMessage.textContainerInset.right = 13
         
         self.eveningMessage.layer.borderWidth = 0.3
         self.eveningMessage.layer.borderColor = UIColor.lightGray.cgColor
         self.eveningMessage.layer.cornerRadius = 5
-        self.eveningMessage.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.eveningMessage.textContainerInset.left = 13
+        self.eveningMessage.textContainerInset.right = 13
         
         self.dawnMessage.layer.borderWidth = 0.3
         self.dawnMessage.layer.borderColor = UIColor.lightGray.cgColor
         self.dawnMessage.layer.cornerRadius = 5
-        self.dawnMessage.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.dawnMessage.textContainerInset.left = 13
+        self.dawnMessage.textContainerInset.right = 13
     }
     
     private func setUpButtons() {
