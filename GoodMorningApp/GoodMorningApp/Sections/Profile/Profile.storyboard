@@ -19,61 +19,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="684"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baf-KR-6T6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="635"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baf-KR-6T6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="687"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-8a-h11">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-8a-h11">
                                         <rect key="frame" x="112" y="16" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="4I5-9o-qlY"/>
                                             <constraint firstAttribute="height" constant="150" id="sSq-ZC-dyW"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do usuário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKA-WK-FS8">
-                                        <rect key="frame" x="16" y="182" width="343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Renan Soares Germano" borderStyle="roundedRect" placeholder="nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fK1-XM-fI5" customClass="CustomTextField" customModule="GoodMorningApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="182" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eAN-pl-GLx"/>
+                                        </constraints>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sobre este usuário" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kij-gC-3nb">
-                                        <rect key="frame" x="16" y="219" width="343" height="128"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQa-vf-1qc">
+                                        <rect key="frame" x="16" y="238" width="343" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="oBE-rk-yHq"/>
+                                            <constraint firstAttribute="height" constant="128" id="jPk-y6-Fuu"/>
                                         </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 91234 5678" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27Y-1a-Z9b">
-                                        <rect key="frame" x="16" y="400" width="343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="renan.rsg@hotmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRm-DF-8fc" customClass="CustomTextField" customModule="GoodMorningApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="382" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Eyj-Xk-XWe"/>
+                                        </constraints>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email do usuário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQP-OS-7kH">
-                                        <rect key="frame" x="16" y="363" width="343" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="11 91234 5678" borderStyle="roundedRect" placeholder="contat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3J-XP-pjw" customClass="CustomTextField" customModule="GoodMorningApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="438" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="66K-7x-2nE"/>
+                                        </constraints>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="27Y-1a-Z9b" firstAttribute="top" secondItem="TQP-OS-7kH" secondAttribute="bottom" constant="16" id="2br-MN-5a2"/>
-                                    <constraint firstItem="Kij-gC-3nb" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="3St-rB-Wor"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="iKA-WK-FS8" secondAttribute="trailing" constant="8" id="3n7-ag-JMP"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="27Y-1a-Z9b" secondAttribute="trailing" constant="8" id="7QG-xh-0IT"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="TQP-OS-7kH" secondAttribute="trailing" constant="8" id="EaA-99-p5U"/>
-                                    <constraint firstItem="TQP-OS-7kH" firstAttribute="top" secondItem="Kij-gC-3nb" secondAttribute="bottom" constant="16" id="F86-Rd-5wc"/>
-                                    <constraint firstItem="iKA-WK-FS8" firstAttribute="top" secondItem="K7I-8a-h11" secondAttribute="bottom" constant="16" id="KxK-fI-yge"/>
-                                    <constraint firstItem="TQP-OS-7kH" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="PFP-BP-Bu9"/>
+                                    <constraint firstItem="d3J-XP-pjw" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="2bq-xj-gTK"/>
+                                    <constraint firstItem="yRm-DF-8fc" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="6qC-r9-UFL"/>
+                                    <constraint firstItem="fK1-XM-fI5" firstAttribute="top" secondItem="K7I-8a-h11" secondAttribute="bottom" constant="16" id="9wb-Rg-3vz"/>
+                                    <constraint firstItem="fK1-XM-fI5" firstAttribute="centerX" secondItem="baf-KR-6T6" secondAttribute="centerX" id="DGY-2C-Xvl"/>
+                                    <constraint firstItem="d3J-XP-pjw" firstAttribute="top" secondItem="yRm-DF-8fc" secondAttribute="bottom" constant="16" id="Eab-jh-yWa"/>
+                                    <constraint firstItem="fK1-XM-fI5" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="Fnx-LC-tSu"/>
                                     <constraint firstItem="K7I-8a-h11" firstAttribute="top" secondItem="baf-KR-6T6" secondAttribute="topMargin" constant="8" id="TAN-Fy-sUd"/>
-                                    <constraint firstItem="iKA-WK-FS8" firstAttribute="centerX" secondItem="baf-KR-6T6" secondAttribute="centerX" id="U1M-7P-rTo"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Kij-gC-3nb" secondAttribute="trailing" constant="8" id="mz7-Tj-snM"/>
-                                    <constraint firstItem="27Y-1a-Z9b" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="p5n-V7-CsL"/>
-                                    <constraint firstItem="Kij-gC-3nb" firstAttribute="top" secondItem="iKA-WK-FS8" secondAttribute="bottom" constant="16" id="sL1-fK-uBV"/>
-                                    <constraint firstItem="iKA-WK-FS8" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="t8f-bm-xEJ"/>
+                                    <constraint firstItem="VQa-vf-1qc" firstAttribute="top" secondItem="fK1-XM-fI5" secondAttribute="bottom" constant="16" id="VGr-S4-HTu"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="d3J-XP-pjw" secondAttribute="trailing" constant="8" id="iOD-zm-OeH"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="VQa-vf-1qc" secondAttribute="trailing" constant="8" id="kcr-zS-cHB"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fK1-XM-fI5" secondAttribute="trailing" constant="8" id="qay-1x-3Cu"/>
+                                    <constraint firstItem="yRm-DF-8fc" firstAttribute="top" secondItem="VQa-vf-1qc" secondAttribute="bottom" constant="16" id="tsP-qk-Dus"/>
                                     <constraint firstItem="K7I-8a-h11" firstAttribute="centerX" secondItem="baf-KR-6T6" secondAttribute="centerX" id="u3o-NX-K6K"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="27Y-1a-Z9b" secondAttribute="bottom" constant="8" id="vrH-kB-p9W"/>
+                                    <constraint firstItem="VQa-vf-1qc" firstAttribute="leading" secondItem="baf-KR-6T6" secondAttribute="leadingMargin" constant="8" id="wS3-RN-iAM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="yRm-DF-8fc" secondAttribute="trailing" constant="8" id="x7g-pb-DqD"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -97,10 +106,10 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
-                        <outlet property="userAbout" destination="Kij-gC-3nb" id="Yii-Rc-eYy"/>
-                        <outlet property="userContact" destination="27Y-1a-Z9b" id="KhU-KN-3pJ"/>
-                        <outlet property="userEmail" destination="TQP-OS-7kH" id="X0m-ew-gt2"/>
-                        <outlet property="userName" destination="iKA-WK-FS8" id="6lB-3Q-jEx"/>
+                        <outlet property="userAbout" destination="VQa-vf-1qc" id="cFY-NP-3he"/>
+                        <outlet property="userContact" destination="d3J-XP-pjw" id="a11-4z-xh6"/>
+                        <outlet property="userEmail" destination="yRm-DF-8fc" id="1Ix-Zf-izw"/>
+                        <outlet property="userName" destination="fK1-XM-fI5" id="9G8-Mt-rcb"/>
                         <outlet property="userPhoto" destination="K7I-8a-h11" id="Kg8-aE-tfJ"/>
                     </connections>
                 </viewController>
@@ -119,7 +128,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c56-fa-4VZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="686"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="qVn-0m-793">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_photo" translatesAutoresizingMaskIntoConstraints="NO" id="qVn-0m-793">
                                         <rect key="frame" x="112" y="16" width="150" height="150"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -286,6 +295,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="3224" height="3116"/>
+        <image name="default_photo" width="256" height="256"/>
     </resources>
 </document>

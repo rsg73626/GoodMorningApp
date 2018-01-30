@@ -11,11 +11,11 @@ import UIKit
 class PorfileViewController: UIViewController {
     
     //MARK: Outlets
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userPhoto: UIImageView!
-    @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userAbout: UITextView!
-    @IBOutlet weak var userContact: UILabel!
+    @IBOutlet weak var userContact: UITextField!
     
     //MARK: Properties
     var user: User?
@@ -23,6 +23,7 @@ class PorfileViewController: UIViewController {
     //MARK: Life sicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpNavigationBar()
         self.setUpUser()
         self.setUpAbout()
     }
@@ -33,7 +34,15 @@ class PorfileViewController: UIViewController {
     }
     
     //MARK: SetUp functions
+    private func setUpNavigationBar() {
+        self.navigationController?.navigationBar.barTintColor = AppColor.yellow
+        self.navigationController?.navigationBar.tintColor = AppColor.blue
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     private func setUpUser() {
+        self.userPhoto.layer.cornerRadius = self.userPhoto.frame.size.width/2
+        self.userPhoto.clipsToBounds = true
         if let user = self.user {
             userName.text = user.name!
             userEmail.text = user.email!
@@ -51,7 +60,8 @@ class PorfileViewController: UIViewController {
         self.userAbout.layer.borderWidth = 0.3
         self.userAbout.layer.borderColor = UIColor.lightGray.cgColor
         self.userAbout.layer.cornerRadius = 5
-        self.userAbout.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.userAbout.textContainerInset.left = 13
+        self.userAbout.textContainerInset.right = 13
     }
 
     /*
