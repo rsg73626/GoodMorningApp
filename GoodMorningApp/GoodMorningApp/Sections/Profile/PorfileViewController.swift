@@ -16,6 +16,7 @@ class PorfileViewController: UIViewController {
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userAbout: UITextView!
     @IBOutlet weak var userContact: UITextField!
+    @IBOutlet weak var logoutButton: UIButton!
     
     //MARK: Properties
     var user: User?
@@ -26,6 +27,7 @@ class PorfileViewController: UIViewController {
         self.setUpNavigationBar()
         self.setUpUser()
         self.setUpAbout()
+        self.setUpButtons()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +39,15 @@ class PorfileViewController: UIViewController {
     private func setUpNavigationBar() {
         self.navigationController?.navigationBar.barTintColor = AppColor.yellow
         self.navigationController?.navigationBar.tintColor = AppColor.blue
-        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    private func setUpButtons() {
+        self.logoutButton.backgroundColor = AppColor.blue
+        self.logoutButton.layer.cornerRadius = 5
+        self.logoutButton.tintColor = UIColor.white
     }
     
     private func setUpUser() {
-        self.userPhoto.layer.cornerRadius = self.userPhoto.frame.size.width/2
         self.userPhoto.clipsToBounds = true
         if let user = self.user {
             userName.text = user.name!
@@ -63,7 +69,14 @@ class PorfileViewController: UIViewController {
         self.userAbout.textContainerInset.left = 13
         self.userAbout.textContainerInset.right = 13
     }
-
+    
+    //MARK: Actions
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        print("Logout button tapped!")
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

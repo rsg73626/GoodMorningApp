@@ -22,7 +22,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZA-CU-oUj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="586"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile" translatesAutoresizingMaskIntoConstraints="NO" id="LUc-Da-Vfa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="LUc-Da-Vfa">
                                         <rect key="frame" x="32" y="8" width="256" height="256"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="256" id="bEL-CG-dM7"/>
@@ -87,7 +87,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98094910383224487" green="0.81636041402816772" blue="0.35905760526657104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="kIf-7o-7hG" firstAttribute="leading" secondItem="8ZA-CU-oUj" secondAttribute="leadingMargin" constant="8" id="2Sl-KK-bGL"/>
                                     <constraint firstItem="Jg3-z9-ffa" firstAttribute="top" secondItem="LUc-Da-Vfa" secondAttribute="bottom" constant="16" id="7Fb-8d-W6f"/>
@@ -150,7 +149,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcE-Qr-pNh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="636"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-fD-U4i">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-fD-U4i">
                                         <rect key="frame" x="32" y="8" width="256" height="256"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="256" id="lx3-FH-YlG"/>
@@ -229,7 +228,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98094910383224487" green="0.81636041402816772" blue="0.35905760526657104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="qhN-5h-cki" firstAttribute="top" secondItem="UXD-jn-cMo" secondAttribute="bottom" constant="16" id="58e-Un-ZSC"/>
                                     <constraint firstItem="Jfa-I0-Sm6" firstAttribute="leading" secondItem="vcE-Qr-pNh" secondAttribute="leadingMargin" constant="8" id="63b-ci-daS"/>
@@ -341,7 +339,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98094910383224487" green="0.81636041402816772" blue="0.35905760526657104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="R0S-fk-FAc" secondAttribute="trailing" constant="8" id="3KQ-1a-ygO"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="vPb-ug-zD3" secondAttribute="trailing" constant="8" id="6pP-Nd-Pkj"/>
@@ -477,10 +474,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app_icon" width="256" height="256"/>
         <image name="default_photo" width="256" height="256"/>
-        <image name="smile" width="3224" height="3116"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="woz-86-bIg"/>
+        <segue reference="i68-yQ-Ub0"/>
     </inferredMetricsTieBreakers>
 </document>

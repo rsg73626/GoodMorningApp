@@ -25,7 +25,6 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpNavigationBar()
         self.profile.isUserInteractionEnabled = true
         self.setUpAbout()
         self.setUpContact()
@@ -49,21 +48,18 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     }
     
     //MARK: SetUp functions
-    private func setUpNavigationBar() {
-        self.navigationController?.navigationBar.tintColor = AppColor.blue
-    }
-    
     private func setUpAbout() {
         let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
         self.about.textColor = lightGray
-        self.about.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        self.about.textContainerInset.left = 13
+        self.about.textContainerInset.right = 13
         self.about.layer.borderWidth = 0.3
         self.about.layer.borderColor = UIColor.lightGray.cgColor
         self.about.layer.cornerRadius = 5
         let toolbar: UIToolbar = UIToolbar()
         toolbar.sizeToFit()
         let flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let okButton: UIBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(self.aboutOkButtonTapped))
+        let okButton: UIBarButtonItem = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(self.aboutOkButtonTapped))
         toolbar.setItems([flexibleSpace, okButton], animated: false)
         self.about.inputAccessoryView = toolbar
     }
@@ -183,7 +179,6 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             ActivityIndicatorManager.shared.stop()
             self.performSegue(withIdentifier: "RegisterSuccessful", sender: self)
         }
-        
     }
     
     //MARK: Aux functions
@@ -202,7 +197,7 @@ class AboutViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             && !self.isDefaultAbout && !(self.contact.text ?? "").isEmpty
     }
     
-    func adjustInsetForKeyboardShow(_ show: Bool, notification: Notification) {
+    private func adjustInsetForKeyboardShow(_ show: Bool, notification: Notification) {
         let userInfo = notification.userInfo ?? [:]
         let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let adjustmentHeight = (keyboardFrame.height + 20) * (show ? 1 : -1)

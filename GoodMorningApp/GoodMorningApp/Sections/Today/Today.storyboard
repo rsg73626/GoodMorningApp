@@ -14,235 +14,135 @@
         <scene sceneID="NeR-Sj-hkf">
             <objects>
                 <tableViewController id="pTT-yT-Sab" customClass="TodayTableViewController" customModule="GoodMorningApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vs0-KH-4Fq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" id="vs0-KH-4Fq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1084"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Bom dia" id="gtt-Js-hvj">
+                            <tableViewSection headerTitle="Bom dia" id="az6-U8-3zV">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="227" id="nsE-oh-nGM" userLabel="morning">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="227"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="Qor-YB-lb8" userLabel="Bom dia">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nsE-oh-nGM" id="yAa-ZP-dHf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qor-YB-lb8" id="T2q-ix-udD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wVh-Lu-ElO" userLabel="message">
-                                                    <rect key="frame" x="16" y="27" width="343" height="128"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="bom dia" text="Mensagem personalizada de bom dia." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Op-qZ-bWG">
+                                                    <rect key="frame" x="16" y="16" width="343" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="IGw-zX-NmD"/>
+                                                        <constraint firstAttribute="height" constant="128" id="01v-tG-V5E"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="pTT-yT-Sab" id="997-ab-iCt"/>
+                                                    </connections>
                                                 </textView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-fc-ghG" userLabel="buttons">
-                                                    <rect key="frame" x="16" y="171" width="343" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-Tc-H4x">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Editar"/>
-                                                            <connections>
-                                                                <action selector="editButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="640-Dj-eZL"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-ZZ-g67">
-                                                            <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Limpar"/>
-                                                            <connections>
-                                                                <action selector="clearButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="7WM-7w-B9C"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="2yM-b2-fWy"/>
-                                                    </constraints>
-                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wVh-Lu-ElO" firstAttribute="top" secondItem="yAa-ZP-dHf" secondAttribute="topMargin" constant="16" id="9ZC-Ef-QbT"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="6xI-fc-ghG" secondAttribute="bottom" constant="5" id="N30-nH-b0P"/>
-                                                <constraint firstItem="wVh-Lu-ElO" firstAttribute="trailing" secondItem="yAa-ZP-dHf" secondAttribute="trailingMargin" id="Qoz-Q5-EdW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="6xI-fc-ghG" secondAttribute="trailing" id="WbP-6Q-Ifd"/>
-                                                <constraint firstItem="6xI-fc-ghG" firstAttribute="top" secondItem="wVh-Lu-ElO" secondAttribute="bottom" constant="16" id="mIb-Bu-fHX"/>
-                                                <constraint firstItem="wVh-Lu-ElO" firstAttribute="leading" secondItem="yAa-ZP-dHf" secondAttribute="leadingMargin" id="z5Q-Zt-vzc"/>
-                                                <constraint firstItem="6xI-fc-ghG" firstAttribute="leading" secondItem="yAa-ZP-dHf" secondAttribute="leadingMargin" id="zOI-oH-6CX"/>
+                                                <constraint firstItem="4Op-qZ-bWG" firstAttribute="trailing" secondItem="T2q-ix-udD" secondAttribute="trailingMargin" id="9EI-mm-s9D"/>
+                                                <constraint firstItem="4Op-qZ-bWG" firstAttribute="top" secondItem="T2q-ix-udD" secondAttribute="topMargin" constant="5" id="bN8-sa-mpf"/>
+                                                <constraint firstItem="4Op-qZ-bWG" firstAttribute="leading" secondItem="T2q-ix-udD" secondAttribute="leadingMargin" id="pQq-fD-cch"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4Op-qZ-bWG" secondAttribute="bottom" constant="5" id="v1B-UF-ReO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Boa tarde" id="DGg-eZ-fMh">
+                            <tableViewSection headerTitle="Boa tarde" id="u2O-td-gcM" userLabel="Boa tarde">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="227" id="Klh-WY-U3y" userLabel="afternoon">
-                                        <rect key="frame" x="0.0" y="283" width="375" height="227"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="kUa-AS-OhM" userLabel="Boa tarde">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Klh-WY-U3y" id="W3W-eH-z0i">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUa-AS-OhM" id="0Na-Qe-f1w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="FUp-hb-cJX" userLabel="message">
-                                                    <rect key="frame" x="16" y="27" width="343" height="128"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="boa tarde" text="Mensagem personalizada de boa tarde." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KgM-eF-p0X">
+                                                    <rect key="frame" x="16" y="16" width="343" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="yGc-Km-wm1"/>
+                                                        <constraint firstAttribute="height" constant="128" id="Hyj-cY-DfS"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="pTT-yT-Sab" id="m5U-LF-EoA"/>
+                                                    </connections>
                                                 </textView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-JD-lPt" userLabel="buttons">
-                                                    <rect key="frame" x="16" y="171" width="343" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy6-hs-sx1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Editar"/>
-                                                            <connections>
-                                                                <action selector="editButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="qBs-Wj-wvL"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mn8-ET-AF6">
-                                                            <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Limpar"/>
-                                                            <connections>
-                                                                <action selector="clearButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="IN5-YF-16X"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="aLV-FW-Acv"/>
-                                                    </constraints>
-                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FUp-hb-cJX" firstAttribute="top" secondItem="W3W-eH-z0i" secondAttribute="topMargin" constant="16" id="TAR-Np-KAg"/>
-                                                <constraint firstItem="kSB-JD-lPt" firstAttribute="leading" secondItem="W3W-eH-z0i" secondAttribute="leadingMargin" id="e1i-R5-5Wt"/>
-                                                <constraint firstItem="kSB-JD-lPt" firstAttribute="top" secondItem="FUp-hb-cJX" secondAttribute="bottom" constant="16" id="hPx-Uo-C3t"/>
-                                                <constraint firstItem="FUp-hb-cJX" firstAttribute="leading" secondItem="W3W-eH-z0i" secondAttribute="leadingMargin" id="lgS-6c-DsO"/>
-                                                <constraint firstItem="FUp-hb-cJX" firstAttribute="trailing" secondItem="W3W-eH-z0i" secondAttribute="trailingMargin" id="vTE-if-ieW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kSB-JD-lPt" secondAttribute="bottom" constant="5" id="xBQ-bD-UKl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kSB-JD-lPt" secondAttribute="trailing" id="xTX-FT-dR6"/>
+                                                <constraint firstItem="KgM-eF-p0X" firstAttribute="top" secondItem="0Na-Qe-f1w" secondAttribute="topMargin" constant="5" id="6cY-av-0DD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KgM-eF-p0X" secondAttribute="bottom" constant="5" id="XVZ-e4-v2R"/>
+                                                <constraint firstItem="KgM-eF-p0X" firstAttribute="leading" secondItem="0Na-Qe-f1w" secondAttribute="leadingMargin" id="bnV-5m-Bfv"/>
+                                                <constraint firstItem="KgM-eF-p0X" firstAttribute="trailing" secondItem="0Na-Qe-f1w" secondAttribute="trailingMargin" id="oLk-lL-Lhi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Boa noite" id="WZ0-sA-7PC">
+                            <tableViewSection headerTitle="Boa noite" id="Yhp-tU-zZP" userLabel="Boa noite">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="227" id="cry-dX-wqw" userLabel="evening">
-                                        <rect key="frame" x="0.0" y="538" width="375" height="227"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="Zup-Uh-2sy" userLabel="Boa noite">
+                                        <rect key="frame" x="0.0" y="440" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cry-dX-wqw" id="nzZ-ZI-W1y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zup-Uh-2sy" id="XCm-X1-yL0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-eA-fFz" userLabel="message">
-                                                    <rect key="frame" x="16" y="27" width="343" height="128"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="boa noite" text="Mensagem personalizada de boa noite." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Edd-zr-7s7">
+                                                    <rect key="frame" x="16" y="16" width="343" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="ajP-ro-bCi"/>
+                                                        <constraint firstAttribute="height" constant="128" id="s6S-Sh-Rhb"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="pTT-yT-Sab" id="H7S-zK-bts"/>
+                                                    </connections>
                                                 </textView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="leg-yH-Tw6" userLabel="buttons">
-                                                    <rect key="frame" x="16" y="171" width="343" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghh-lu-dVv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Editar"/>
-                                                            <connections>
-                                                                <action selector="editButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="TKR-4F-raI"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-c9-zdu">
-                                                            <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Limpar"/>
-                                                            <connections>
-                                                                <action selector="clearButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="Fhf-IL-xX7"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="IOw-EA-shN"/>
-                                                    </constraints>
-                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1ae-eA-fFz" firstAttribute="leading" secondItem="nzZ-ZI-W1y" secondAttribute="leadingMargin" id="1pZ-fl-IiY"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="leg-yH-Tw6" secondAttribute="bottom" constant="5" id="Ek8-EW-ZrJ"/>
-                                                <constraint firstItem="leg-yH-Tw6" firstAttribute="leading" secondItem="nzZ-ZI-W1y" secondAttribute="leadingMargin" id="IOg-OG-Qhs"/>
-                                                <constraint firstItem="1ae-eA-fFz" firstAttribute="trailing" secondItem="nzZ-ZI-W1y" secondAttribute="trailingMargin" id="JV7-hG-eTb"/>
-                                                <constraint firstItem="leg-yH-Tw6" firstAttribute="top" secondItem="1ae-eA-fFz" secondAttribute="bottom" constant="16" id="clo-x0-Dvt"/>
-                                                <constraint firstItem="1ae-eA-fFz" firstAttribute="top" secondItem="nzZ-ZI-W1y" secondAttribute="topMargin" constant="16" id="dEz-KB-Yuo"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="leg-yH-Tw6" secondAttribute="trailing" id="g3B-2i-pLs"/>
+                                                <constraint firstItem="Edd-zr-7s7" firstAttribute="top" secondItem="XCm-X1-yL0" secondAttribute="topMargin" constant="5" id="Iga-iw-wvo"/>
+                                                <constraint firstItem="Edd-zr-7s7" firstAttribute="trailing" secondItem="XCm-X1-yL0" secondAttribute="trailingMargin" id="m27-bG-SAm"/>
+                                                <constraint firstItem="Edd-zr-7s7" firstAttribute="leading" secondItem="XCm-X1-yL0" secondAttribute="leadingMargin" id="pMg-ix-dqd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Edd-zr-7s7" secondAttribute="bottom" constant="5" id="zTZ-Ga-iNd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Boa madrugada" id="Vh6-A0-W1C">
+                            <tableViewSection headerTitle="Boa madrugada" id="A7y-Ya-MsP" userLabel="Boa madrugada">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="227" id="G85-VL-SWs" userLabel="dawn">
-                                        <rect key="frame" x="0.0" y="793" width="375" height="227"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="hBo-Uf-He6" userLabel="Boa madrugada">
+                                        <rect key="frame" x="0.0" y="640" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G85-VL-SWs" id="0j9-zY-B2f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hBo-Uf-He6" id="CCf-nd-u7R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="keE-dE-aLf" userLabel="message">
-                                                    <rect key="frame" x="16" y="27" width="343" height="128"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="boa madrugada" text="Mensagem personalizada de boa madrugada." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2lk-7E-e4F">
+                                                    <rect key="frame" x="16" y="16" width="343" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="GJn-wC-fp8"/>
+                                                        <constraint firstAttribute="height" constant="128" id="fzn-Be-T2z"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="pTT-yT-Sab" id="6Ko-36-je3"/>
+                                                    </connections>
                                                 </textView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-fk-Uvg" userLabel="buttons">
-                                                    <rect key="frame" x="16" y="171" width="343" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOc-UK-CcK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Editar"/>
-                                                            <connections>
-                                                                <action selector="editButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="Xrt-Xh-hSA"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNw-6a-TDl">
-                                                            <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="40"/>
-                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Limpar"/>
-                                                            <connections>
-                                                                <action selector="clearButtonTapped:" destination="pTT-yT-Sab" eventType="touchUpInside" id="sz0-46-gR8"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="PFW-F7-c2V"/>
-                                                    </constraints>
-                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cgb-fk-Uvg" firstAttribute="top" secondItem="keE-dE-aLf" secondAttribute="bottom" constant="16" id="DYV-Ze-wPc"/>
-                                                <constraint firstItem="keE-dE-aLf" firstAttribute="leading" secondItem="0j9-zY-B2f" secondAttribute="leadingMargin" id="ERb-g6-1BO"/>
-                                                <constraint firstItem="cgb-fk-Uvg" firstAttribute="leading" secondItem="0j9-zY-B2f" secondAttribute="leadingMargin" id="GhT-YS-NUb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="cgb-fk-Uvg" secondAttribute="trailing" id="PYv-XG-yhi"/>
-                                                <constraint firstItem="keE-dE-aLf" firstAttribute="trailing" secondItem="0j9-zY-B2f" secondAttribute="trailingMargin" id="UZp-z2-UjQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cgb-fk-Uvg" secondAttribute="bottom" constant="5" id="XEo-pe-T8a"/>
-                                                <constraint firstItem="keE-dE-aLf" firstAttribute="top" secondItem="0j9-zY-B2f" secondAttribute="topMargin" constant="16" id="eah-CO-jhX"/>
+                                                <constraint firstItem="2lk-7E-e4F" firstAttribute="trailing" secondItem="CCf-nd-u7R" secondAttribute="trailingMargin" id="C73-16-3Qn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2lk-7E-e4F" secondAttribute="bottom" constant="5" id="Rd5-PE-Cgc"/>
+                                                <constraint firstItem="2lk-7E-e4F" firstAttribute="top" secondItem="CCf-nd-u7R" secondAttribute="topMargin" constant="5" id="vnQ-Fr-Jm6"/>
+                                                <constraint firstItem="2lk-7E-e4F" firstAttribute="leading" secondItem="CCf-nd-u7R" secondAttribute="leadingMargin" id="wxO-Ad-OKQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -257,23 +157,15 @@
                     <navigationItem key="navigationItem" title="Hoje" id="AGs-i1-j0M"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
-                        <outlet property="afternoonClear" destination="Mn8-ET-AF6" id="Gn0-0a-EOA"/>
-                        <outlet property="afternoonEdit" destination="sy6-hs-sx1" id="TQm-PD-7Gn"/>
-                        <outlet property="afternoonMessage" destination="FUp-hb-cJX" id="oig-Vc-Gxt"/>
-                        <outlet property="dawnClear" destination="PNw-6a-TDl" id="ooG-J1-umu"/>
-                        <outlet property="dawnEdit" destination="xOc-UK-CcK" id="g7N-Lw-fbZ"/>
-                        <outlet property="dawnMessage" destination="keE-dE-aLf" id="4ci-ma-uEI"/>
-                        <outlet property="eveningClear" destination="NGB-c9-zdu" id="XCY-mc-ssI"/>
-                        <outlet property="eveningEdit" destination="Ghh-lu-dVv" id="qq5-VL-RsR"/>
-                        <outlet property="eveningMessage" destination="1ae-eA-fFz" id="Mdf-IC-Lah"/>
-                        <outlet property="morningClear" destination="zCl-ZZ-g67" id="eun-kb-qH5"/>
-                        <outlet property="morningEdit" destination="gC3-Tc-H4x" id="JtW-cZ-QRK"/>
-                        <outlet property="morningMessage" destination="wVh-Lu-ElO" id="keA-oU-dND"/>
+                        <outlet property="afternoonMessage" destination="KgM-eF-p0X" id="xAX-uS-O38"/>
+                        <outlet property="dawnMessage" destination="2lk-7E-e4F" id="zOG-gS-Ikw"/>
+                        <outlet property="eveningMessage" destination="Edd-zr-7s7" id="z0I-pI-Znz"/>
+                        <outlet property="morningMessage" destination="4Op-qZ-bWG" id="CZ3-rS-aBz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nze-wK-z69" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="60.26986506746627"/>
+            <point key="canvasLocation" x="351.44927536231887" y="59.510869565217398"/>
         </scene>
         <!--Hoje-->
         <scene sceneID="RxI-RW-nzR">

@@ -33,12 +33,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.setUpNavigationBar()
         self.setUpButtons()
         self.updateButtonsState()
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(LoginViewController.keyboardWillShow(_:)),
             name: Notification.Name.UIKeyboardWillShow,
             object: nil
         )
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(LoginViewController.keyboardWillHide(_:)),
@@ -49,6 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setUpNavigationBar()
         self.setUpFieldsAndButtonsSpace()
     }
     
@@ -56,26 +59,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        UIApplication.shared.statusBarStyle = .lightContent
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        UIApplication.shared.statusBarStyle = .default
-//    }
-    
     //MARK: SetUp Functions
     private func setUpNavigationBar() {
-        let textAttributes = [NSAttributedStringKey.foregroundColor:AppColor.yellow]
-        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.navigationBar.barTintColor = AppColor.yellow
-        self.navigationController?.navigationBar.backgroundColor = AppColor.yellow
-        self.navigationController?.navigationBar.tintColor = AppColor.blue
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
+    
     private func setUpButtons(){
         self.login.backgroundColor = AppColor.blue
         self.login.tintColor = UIColor.white
@@ -151,7 +144,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             ActivityIndicatorManager.shared.stop()
             self.performSegue(withIdentifier: "LoginSuccessful", sender: self)
         }
-        
     }
     
     @IBAction func loginWithFacebookButtonTapped(_ sender: UIButton) {

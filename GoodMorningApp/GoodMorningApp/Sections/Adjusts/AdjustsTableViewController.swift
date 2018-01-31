@@ -73,7 +73,7 @@ class AdjustsTableViewController: UITableViewController {
         view.backgroundColor = AppColor.lightBlue
         let label = UILabel()
         label.frame = CGRect(x: 16, y: (40-20.5)/2, width: 200, height: 20.5)
-        label.text = section == 1 ? "Radio de notificação" : "Desenvolvedores"
+        label.text = section == 1 ? "Raio de notificação" : "Desenvolvedor"
         label.textColor = UIColor.white
         view.addSubview(label)
         return view
@@ -83,7 +83,6 @@ class AdjustsTableViewController: UITableViewController {
     private func setUpNavigationBar() {
         self.navigationController?.navigationBar.barTintColor = AppColor.yellow
         self.navigationController?.navigationBar.tintColor = AppColor.blue
-        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     private func setUpGoodMorning() {

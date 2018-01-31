@@ -17,7 +17,6 @@ class FeedTableViewController: UITableViewController {
     //MARK: Outlets
     @IBOutlet weak var filter: UIBarButtonItem!
     
-    
     //MARK: Life cicle functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +52,6 @@ class FeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "greeting", for: indexPath) as? GreetingTableViewCell else {
             fatalError("Imporssible to conver UITableViewCell to GreetingTableViewCell.")
-            
         }
         let index = indexPath.row
         cell.message.restorationIdentifier = "\(index)"
@@ -74,8 +72,7 @@ class FeedTableViewController: UITableViewController {
             self.navigationItem.rightBarButtonItem = nil
         }
         self.navigationController?.navigationBar.barTintColor = AppColor.yellow
-        self.navigationController?.navigationBar.tintColor = AppColor.blue
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     private func setUpTabBar() {
@@ -152,7 +149,8 @@ class FeedTableViewController: UITableViewController {
         cell.userName.text = interaction.greeting.creator?.name
         cell.title.text = interaction.greeting.type.string
         cell.message.text = interaction.greeting.message
-        cell.action.titleLabel?.text = !interaction.isRetributed ? ActionKey.retribute : !interaction.isLikedByReceiver ? ActionKey.like : ActionKey.liked
+        cell.action.setTitle(!interaction.isRetributed ? ActionKey.retribute : !interaction.isLikedByReceiver ? ActionKey.like : ActionKey.liked, for: .normal)
+        cell.action.isEnabled = !interaction.isRetributed || !interaction.isLikedByReceiver
     }
     //MARK: Actions
     @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {

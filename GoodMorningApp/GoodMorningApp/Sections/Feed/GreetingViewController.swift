@@ -15,8 +15,6 @@ class GreetingViewController: UIViewController {
     private let greetings = ["Bom dia", "Boa tarde", "Boa noite", "Boa madrugada"]
     
     //MARK: Outlets
-    @IBOutlet weak var greetingHeader: UIView!
-    @IBOutlet weak var greetingTitle: UILabel!
     @IBOutlet weak var message: UITextView!
     @IBOutlet weak var action: UIButton!
     @IBOutlet weak var sentByHeader: UIView!
@@ -42,28 +40,28 @@ class GreetingViewController: UIViewController {
     
     //MARK: SetUp functions
     private func setUpHeaders() {
-        self.greetingHeader.backgroundColor = AppColor.lightBlue
         let type = self.interaction?.greeting.type.rawValue ?? 1
-        self.greetingTitle.text = self.greetings[type-1]
+        self.navigationItem.title = self.greetings[type-1]
         self.sentByHeader.backgroundColor = AppColor.lightBlue
-        self.userPhoto.layer.cornerRadius = self.userPhoto.frame.size.width/2
         self.userPhoto.clipsToBounds = true
     }
     
-    private func setUpInteracton(){
+    private func setUpInteracton() {
         if let interaction = self.interaction{
             self.message.text = interaction.greeting.message
             
             if let isRetribuited = self.interaction?.isRetributed {
                 if !isRetribuited {
-                    self.action.titleLabel?.text = ActionKey.retribute
+                    self.action.setTitle(ActionKey.retribute, for: .normal)
                 }else if let isLikedByReciever = self.interaction?.isLikedByReceiver {
+                    
                     if isLikedByReciever{
-                        self.action.titleLabel?.text = ActionKey.liked
+                        self.action.setTitle(ActionKey.liked, for: .normal)
                         self.action.isEnabled = false
                     }else{
-                        self.action.titleLabel?.text = ActionKey.like
+                        self.action.setTitle(ActionKey.like, for: .normal)
                     }
+                    
                 }
             }
             
@@ -83,7 +81,6 @@ class GreetingViewController: UIViewController {
     }
     
     private func setUpTextViews() {
-        let lightGray = UIColor.lightGray.withAlphaComponent(0.7)
         self.message.layer.borderWidth = 0.3
         self.message.layer.borderColor = UIColor.lightGray.cgColor
         self.message.layer.cornerRadius = 5
@@ -111,7 +108,16 @@ class GreetingViewController: UIViewController {
     }
     
     @IBAction func contactTapped(_ sender: Any) {
-        print("contact tapped!")
+        let alert = UIAlertController(title: "Contato", message: "Escolha uma opção.", preferredStyle: .actionSheet)
+        let saveAction = UIAlertAction(title: "Salvar contato", style: .default, handler: nil)
+        let callAction = UIAlertAction(title: "Ligar", style: .default, handler : nil)
+        let copyAction = UIAlertAction(title: "Copiar", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(saveAction)
+        alert.addAction(callAction)
+        alert.addAction(copyAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
 

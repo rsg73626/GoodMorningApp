@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile" translatesAutoresizingMaskIntoConstraints="NO" id="YOu-ej-qeB">
-                                <rect key="frame" x="59" y="215.5" width="256" height="256"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="88j-1e-T55">
+                                <rect key="frame" x="59" y="205" width="256" height="256"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="0ca-nh-rf9"/>
-                                    <constraint firstAttribute="width" constant="256" id="alz-Xs-t8c"/>
+                                    <constraint firstAttribute="width" constant="256" id="03P-aN-QUc"/>
+                                    <constraint firstAttribute="height" constant="256" id="vEd-C8-XcC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98094910383224487" green="0.81636041402816772" blue="0.35905760526657104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YOu-ej-qeB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9LT-Jq-iKp"/>
-                            <constraint firstItem="YOu-ej-qeB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HmC-YK-Lp2"/>
+                            <constraint firstItem="88j-1e-T55" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OmA-a4-vN6"/>
+                            <constraint firstItem="88j-1e-T55" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="g9u-gS-Omn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="smile" width="3224" height="3116"/>
+        <image name="app_icon" width="256" height="256"/>
     </resources>
 </document>
