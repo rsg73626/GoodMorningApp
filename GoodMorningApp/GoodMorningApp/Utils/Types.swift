@@ -19,6 +19,7 @@ enum GreetingType: Int{
     case GoodEvening = 3
     case GoodDawn = 4
     static var stringList: [String] {get {return ["Bom dia", "Boa tarde", "Boa noite", "Boa madrugada"]}}
+    static var list: [GreetingType] {get {return [GreetingType.GoodMorning, GreetingType.GoodAfternoon, GreetingType.GoodEvening, GreetingType.GoodDawn]}}
     var string: String {get {return self == .GoodMorning ? "Bom dia" : self == .GoodAfternoon ? "Boa tarde" : self == .GoodEvening ? "Boa noite" : "Boa madrugad"}}
 }
 

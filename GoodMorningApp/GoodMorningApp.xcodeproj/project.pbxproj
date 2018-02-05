@@ -51,6 +51,8 @@
 		45AF01B81FFC65D300BFCA08 /* GoodMorningAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01B71FFC65D300BFCA08 /* GoodMorningAppTests.swift */; };
 		45AF01C31FFC65D300BFCA08 /* GoodMorningAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */; };
 		45C3B3F7200FE2560036525C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C3B3F6200FE2560036525C /* Assets.xcassets */; };
+		45F1BF802027E09800496D65 /* NewAdjustsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1BF7F2027E09800496D65 /* NewAdjustsTableViewController.swift */; };
+		45F1BF82202807D000496D65 /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1BF81202807D000496D65 /* IntervalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMorningAppUITests.swift; sourceTree = "<group>"; };
 		45AF01C41FFC65D300BFCA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C3B3F6200FE2560036525C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45F1BF7F2027E09800496D65 /* NewAdjustsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAdjustsTableViewController.swift; sourceTree = "<group>"; };
+		45F1BF81202807D000496D65 /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 			children = (
 				456A94BA1FFDE54C00B6CA39 /* Adjusts.storyboard */,
 				4540192F2003BBC2001F252F /* AdjustsTableViewController.swift */,
+				45F1BF7F2027E09800496D65 /* NewAdjustsTableViewController.swift */,
+				45F1BF81202807D000496D65 /* IntervalTableViewController.swift */,
 			);
 			path = Adjusts;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				4540191C2003B8F9001F252F /* LoginViewController.swift in Sources */,
 				4540191E2003B909001F252F /* RegisterViewController.swift in Sources */,
 				454019242003BACB001F252F /* FeedTableViewController.swift in Sources */,
+				45F1BF802027E09800496D65 /* NewAdjustsTableViewController.swift in Sources */,
 				4540194F20046496001F252F /* Types.swift in Sources */,
 				45401939200411A5001F252F /* Contact.swift in Sources */,
 				45401944200425F1001F252F /* ContactDataManager.swift in Sources */,
@@ -499,6 +506,7 @@
 				4540192A2003BB36001F252F /* GreetingTableViewCell.swift in Sources */,
 				456411AB20143C8600B8E891 /* FilterViewController.swift in Sources */,
 				4556550B2009CA800055A4B4 /* ActivityIndicatorManager.swift in Sources */,
+				45F1BF82202807D000496D65 /* IntervalTableViewController.swift in Sources */,
 				454019302003BBC2001F252F /* AdjustsTableViewController.swift in Sources */,
 				454019262003BADD001F252F /* GreetingViewController.swift in Sources */,
 				454019322003BBE6001F252F /* PorfileViewController.swift in Sources */,
