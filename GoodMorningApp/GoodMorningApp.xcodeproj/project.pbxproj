@@ -49,10 +49,11 @@
 		45AF01A51FFC65D300BFCA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AF01A31FFC65D300BFCA08 /* Main.storyboard */; };
 		45AF01A81FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01A61FFC65D300BFCA08 /* GoodMorningApp.xcdatamodeld */; };
 		45AF01B81FFC65D300BFCA08 /* GoodMorningAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01B71FFC65D300BFCA08 /* GoodMorningAppTests.swift */; };
-		45AF01C31FFC65D300BFCA08 /* GoodMorningAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */; };
+		45AF01C31FFC65D300BFCA08 /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF01C21FFC65D300BFCA08 /* SignInUITests.swift */; };
 		45C3B3F7200FE2560036525C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C3B3F6200FE2560036525C /* Assets.xcassets */; };
 		45F1BF802027E09800496D65 /* NewAdjustsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1BF7F2027E09800496D65 /* NewAdjustsTableViewController.swift */; };
 		45F1BF82202807D000496D65 /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1BF81202807D000496D65 /* IntervalTableViewController.swift */; };
+		CFCD095520E54F6700B9DED4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD095420E54F6700B9DED4 /* CustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,11 +121,12 @@
 		45AF01B71FFC65D300BFCA08 /* GoodMorningAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMorningAppTests.swift; sourceTree = "<group>"; };
 		45AF01B91FFC65D300BFCA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45AF01BE1FFC65D300BFCA08 /* GoodMorningAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodMorningAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMorningAppUITests.swift; sourceTree = "<group>"; };
+		45AF01C21FFC65D300BFCA08 /* SignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUITests.swift; sourceTree = "<group>"; };
 		45AF01C41FFC65D300BFCA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C3B3F6200FE2560036525C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45F1BF7F2027E09800496D65 /* NewAdjustsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAdjustsTableViewController.swift; sourceTree = "<group>"; };
 		45F1BF81202807D000496D65 /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
+		CFCD095420E54F6700B9DED4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				452F67132017ECF000F92AE1 /* CustomTextField.swift */,
 				453F3F3B201962FD00F2843F /* CustomLabel.swift */,
+				CFCD095420E54F6700B9DED4 /* CustomTextView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -332,7 +335,7 @@
 		45AF01C11FFC65D300BFCA08 /* GoodMorningAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				45AF01C21FFC65D300BFCA08 /* GoodMorningAppUITests.swift */,
+				45AF01C21FFC65D300BFCA08 /* SignInUITests.swift */,
 				45AF01C41FFC65D300BFCA08 /* Info.plist */,
 			);
 			path = GoodMorningAppUITests;
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCD095520E54F6700B9DED4 /* CustomTextView.swift in Sources */,
 				455655092009BA650055A4B4 /* EditProfileViewController.swift in Sources */,
 				4540194A2004287F001F252F /* PreferenceManager.swift in Sources */,
 				453F3F3C201962FD00F2843F /* CustomLabel.swift in Sources */,
@@ -528,7 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45AF01C31FFC65D300BFCA08 /* GoodMorningAppUITests.swift in Sources */,
+				45AF01C31FFC65D300BFCA08 /* SignInUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +677,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C45KF93FKW;
 				INFOPLIST_FILE = GoodMorningApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mackmobile.GoodMorningApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -688,6 +693,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C45KF93FKW;
 				INFOPLIST_FILE = GoodMorningApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mackmobile.GoodMorningApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -68,6 +68,8 @@ class PorfileViewController: UIViewController {
         self.userAbout.layer.cornerRadius = 5
         self.userAbout.textContainerInset.left = 13
         self.userAbout.textContainerInset.right = 13
+        self.userAbout.textContainerInset.top = 16
+        self.userAbout.textContainerInset.bottom = 16
     }
     
     //MARK: Actions
